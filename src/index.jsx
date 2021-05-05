@@ -16,7 +16,7 @@ class MyIndieFixApplication extends React.Component {
 }
 
 // Finds the root of my app
-const container = document.getElementByClassName('app-container')[0];
+const container = document.getElementsByClassName('app-container')[0];
 
 // React renders my app in the root DOM element
 ReactDOM.render(React.createElement(MyIndieFixApplication), container);
