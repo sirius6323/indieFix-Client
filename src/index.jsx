@@ -8,11 +8,7 @@ import './index.scss';
 // Main component (will eventually use all others)
 class MyIndieFixApplication extends React.Component {
 	render() {
-		return (
-			<div className='my-indie'>
-				<div>Greetings from IndieFix!!!</div>
-			</div>
-		);
+		return <MainView />;
 	}
 }
 
