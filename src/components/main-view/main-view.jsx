@@ -44,7 +44,7 @@ class MainView extends React.Component {
 		return (
 			<div className='main-view'>
 				{movies.map((movie) => (
-					<div key={movie.id}>{movie.Title}</div>
+					<MovieCard key={movie._id} movieData={movie} />
 				))}
 			</div>
 		);
