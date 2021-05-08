@@ -3,7 +3,7 @@ import React from 'react';
 // Component to display single movie view
 export class MovieView extends React.Component {
 	render() {
-		const { movie } = this.props;
+		const { movie, onBackClick } = this.props;
 
 		return (
 			<div className='movie-view'>
