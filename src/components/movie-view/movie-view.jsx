@@ -3,20 +3,20 @@ import React from 'react';
 // Component to display single movie view
 export class MovieView extends React.Component {
 	render() {
-		const { movieData } = this.props;
+		const { movie } = this.props;
 
 		return (
 			<div className='movie-view'>
 				<div className='movie-poster'>
-					<img src={movieData.ImageURL} />
+					<img src={movie.ImageURL} />
 				</div>
 				<div className='movie-title'>
 					<span className='label'>Title:</span>
-					<span className='value'>{movieData.Title}</span>
+					<span className='value'>{movie.Title}</span>
 				</div>
 				<div className='movie-description'>
 					<span className='label'>Description:</span>
-					<span className='value'>{movieData.Description}</span>
+					<span className='value'>{movie.Description}</span>
 				</div>
 			</div>
 		);
