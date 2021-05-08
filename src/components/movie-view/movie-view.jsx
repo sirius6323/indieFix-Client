@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Component to display single movie view
 export class MovieView extends React.Component {
 	render() {
 		const { movieData } = this.props;
