@@ -63,15 +63,15 @@ class MainView extends React.Component {
 						}}
 					/>
 				) : (
-					movies.map((movie) => {
+					movies.map((movie) => (
 						<MovieCard
 							key={movie._id}
-							movieData={movie}
+							movie={movie}
 							onMovieClick={(movie) => {
 								this.setSelectedMovie(movie);
 							}}
-						/>;
-					})
+						/>
+					))
 				)}
 			</div>
 		);
