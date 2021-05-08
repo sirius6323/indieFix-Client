@@ -28,11 +28,14 @@ class MainView extends React.Component {
 						'"https://www.imdb.com/title/tt5104604/mediaviewer/rm1483320321/',
 				},
 			],
+			selectedMovie: null,
 		};
 	}
 
 	render() {
-		const { movies } = this.state;
+		const { movies, selectedMovie } = this.state;
+
+		if (selectedMovie) return <MovieView movie={selectedMovie} />;
 
 		if (movies.length === 0)
 			return (
