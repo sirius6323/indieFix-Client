@@ -15,7 +15,7 @@ class MainView extends React.Component {
 	// Fetch Movies from server
 	componentDidMount() {
 		axios
-			.get('http://indiefix.herokuapp.com/movies')
+			.get('https://indiefix.herokuapp.com/movies')
 			.then((response) => {
 				this.setState({
 					movies: response.data,
@@ -33,12 +33,7 @@ class MainView extends React.Component {
 	render() {
 		const { movies, selectedMovie } = this.state;
 
-		if (movies.length === 0)
-			return (
-				<div className='main-view'>
-					Please check back soon. Movies will be added.
-				</div>
-			);
+		if (movies.length === 0) return <div className='main-view' />;
 
 		return (
 			<div className='main-view'>
