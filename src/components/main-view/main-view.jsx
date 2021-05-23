@@ -12,6 +12,20 @@ class MainView extends React.Component {
 		};
 	}
 
+	// Fetch Movies from server
+	componentDidMount() {
+		axios
+			.get('http://indieFix.herokuapp.com/movies')
+			.then((response) => {
+				this.setState({
+					movies: response.data,
+				});
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	}
+
 	setSelectedMovie(newSelectedMovie) {
 		this.setState({ selectedMovie: newSelectedMovie });
 	}
