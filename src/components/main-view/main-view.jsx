@@ -15,7 +15,7 @@ class MainView extends React.Component {
 	// Fetch Movies from server
 	componentDidMount() {
 		axios
-			.get('http://indieFix.herokuapp.com/movies')
+			.get('http://indiefix.herokuapp.com/movies')
 			.then((response) => {
 				this.setState({
 					movies: response.data,
