@@ -16,8 +16,8 @@ export function LoginView(props) {
 
 	return (
 		<>
-			<form>
-				<label>
+			<form className='login-form'>
+				<label className='login-input'>
 					Username:
 					<input
 						type='text'
@@ -25,7 +25,8 @@ export function LoginView(props) {
 						onChange={(e) => setUsername(e.target.value)}
 					/>
 				</label>
-				<label>
+				<br />
+				<label className='login-input'>
 					Password:
 					<input
 						type='password'
@@ -33,10 +34,29 @@ export function LoginView(props) {
 						onChange={(e) => setPassword(e.target.value)}
 					/>
 				</label>
-				<button type='submit' onClick={handleSubmit}>
-					Submit
-				</button>
+				<br />
+				<span>
+					<button type='submit' onClick={handleSubmit}>
+						Submit
+					</button>
+					<button type='secondary' onClick={props.toggleRegister}>
+						Register
+					</button>
+				</span>
 			</form>
 		</>
 	);
 }
+
+export function Button({ label }) {
+	return <button className='login-button'>{label}</button>;
+}
+
+LoginView.PropTypes = {
+	user: PropTypes.shape({
+		Username: PropTypes.string.isRequired,
+		Password: PropTypes.string.isRequired,
+	}),
+	onLoggedIn: PropTypes.func.isRequired,
+	onRegister: PropTypes.func,
+};
