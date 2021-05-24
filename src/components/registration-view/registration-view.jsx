@@ -23,7 +23,7 @@ export function RegistrationView(props) {
 				<input
 					type='text'
 					value={firstName}
-					onChange={e.setFirstName(e.target.value)}
+					onChange={(e) => setFirstName(e.target.value)}
 				/>
 			</label>
 			<label className='register-input'>
@@ -31,7 +31,7 @@ export function RegistrationView(props) {
 				<input
 					type='text'
 					value={lastName}
-					onChange={e.setLastName(e.target.value)}
+					onChange={(e) => setLastName(e.target.value)}
 				/>
 			</label>
 			<label className='register-input'>
@@ -39,7 +39,7 @@ export function RegistrationView(props) {
 				<input
 					type='text'
 					value={birthday}
-					onChange={e.setBirthday(e.target.value)}
+					onChange={(e) => setBirthday(e.target.value)}
 				/>
 			</label>
 			<label className='register-input'>
@@ -47,7 +47,7 @@ export function RegistrationView(props) {
 				<input
 					type='text'
 					value={username}
-					onChange={e.setUsername(e.target.value)}
+					onChange={(e) => setUsername(e.target.value)}
 				/>
 			</label>
 			<label className='register-input'>
@@ -55,7 +55,7 @@ export function RegistrationView(props) {
 				<input
 					type='text'
 					value={password}
-					onChange={e.setPassword(e.target.value)}
+					onChange={(e) => setPassword(e.target.value)}
 				/>
 			</label>
 			<label className='register-input'>
@@ -63,7 +63,7 @@ export function RegistrationView(props) {
 				<input
 					type='text'
 					value={email}
-					onChange={e.setEmail(e.target.value)}
+					onChange={(e) => setEmail(e.target.value)}
 				/>
 			</label>
 			<span>
@@ -82,6 +82,6 @@ export function RegistrationView(props) {
 	);
 }
 
-RegistrationView.PropTypes = {
+RegistrationView.propTypes = {
 	onRegister: PropTypes.func.isRequired,
 };
