@@ -7,9 +7,11 @@ import { MovieView } from '../movie-view/movie-view';
 class MainView extends React.Component {
 	constructor() {
 		super();
+		// Initial state is set to null
 		this.state = {
 			movies: [],
 			selectedMovie: null,
+			user: null,
 		};
 	}
 
@@ -31,8 +33,15 @@ class MainView extends React.Component {
 		this.setState({ selectedMovie: newSelectedMovie });
 	}
 
+	onLoggedIn(user) {
+		this.setState({ user });
+	}
+
 	render() {
 		const { movies, selectedMovie } = this.state;
+
+		if (!user)
+			return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
 
 		if (movies.length === 0) return <div className='main-view' />;
 
