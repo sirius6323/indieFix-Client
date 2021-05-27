@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MainView from './components/main-view/main-view';
+import Container from 'react-bootstrap/Container';
 
 // Import statement to bundle './index.scss'
 import './index.scss';
@@ -8,7 +9,11 @@ import './index.scss';
 // Main component (will eventually use all others)
 class MyIndieFixApplication extends React.Component {
 	render() {
-		return <MainView />;
+		return (
+			<Container>
+				<MainView />
+			</Container>
+		);
 	}
 }
 
