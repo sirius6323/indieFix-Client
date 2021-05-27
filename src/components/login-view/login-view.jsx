@@ -15,36 +15,29 @@ export function LoginView(props) {
 	};
 
 	return (
-		<>
-			<form className='login-form'>
-				<label className='login-input'>
-					Username:
-					<input
-						type='text'
-						value={username}
-						onChange={(e) => setUsername(e.target.value)}
-					/>
-				</label>
-				<br />
-				<label className='login-input'>
-					Password:
-					<input
-						type='password'
-						value={password}
-						onChange={(e) => setPassword(e.target.value)}
-					/>
-				</label>
-				<br />
-				<span>
-					<button type='submit' onClick={handleSubmit}>
-						Submit
-					</button>
-					<button type='secondary' onClick={props.toggleRegister}>
-						Register
-					</button>
-				</span>
-			</form>
-		</>
+		<Form>
+			<Form.Group controlId='formUsername' className='login-form'>
+				<Form.Label className='login-input'>Username:</Form.Label>
+				<Form.Control
+					type='text'
+					onChange={(e) => setUsername(e.target.value)}
+				/>
+			</Form.Group>
+
+			<Form.Group controlId='formPassword'>
+				<Form.Label>Password:</Form.Label>
+				<Form.Control
+					type='password'
+					onChange={(e) => setPassword(e.target.value)}
+				/>
+			</Form.Group>
+			<Button variant='primary' type='submit' onClick={handleSubmit}>
+				Submit
+			</Button>
+			<Button type='secondary' onClick={props.toggleRegister}>
+				Register
+			</Button>
+		</Form>
 	);
 }
 
