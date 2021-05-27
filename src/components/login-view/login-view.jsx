@@ -18,8 +18,9 @@ export function LoginView(props) {
 
 	return (
 		<Form>
+			<h3>Login</h3>
 			<Form.Group controlId='formUsername' className='mb-3'>
-				<Form.Label className='login-input'>Username:</Form.Label>
+				<Form.Label className='login-input'>Username</Form.Label>
 				<Form.Control
 					size='md'
 					type='text'
@@ -32,20 +33,30 @@ export function LoginView(props) {
 			</Form.Group>
 
 			<Form.Group controlId='formPassword'>
-				<Form.Label>Password:</Form.Label>
+				<Form.Label>Password</Form.Label>
 				<Form.Control
+					size='md'
 					type='password'
 					onChange={(e) => setPassword(e.target.value)}
+					placeholder='Enter Password'
 				/>
+				<Form.Text className='text-muted'>
+					Your password requires a minimum of 8 characters.
+				</Form.Text>
 			</Form.Group>
-			<Row>
-				<Button variant='primary' type='submit' onClick={handleSubmit}>
+			<div className='d-grid gap-2'>
+				<Button
+					variant='primary'
+					type='submit'
+					size='lg'
+					onClick={handleSubmit}
+				>
 					Submit
 				</Button>
-				<Button type='secondary' onClick={props.toggleRegister}>
+				<Button type='secondary' size='lg' onClick={props.toggleRegister}>
 					Register
 				</Button>
-			</Row>
+			</div>
 		</Form>
 	);
 }
