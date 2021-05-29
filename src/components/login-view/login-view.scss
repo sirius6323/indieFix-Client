@@ -2,10 +2,11 @@
 	margin: 0;
 	padding: 0;
 	background-color: #0f1516;
+	color: #fff;
 }
 
 .login-title {
-	color: #fff;
+	padding-bottom: 20px;
 }
 
 .customHeight {
@@ -17,14 +18,10 @@
 	border: 3px solid #17a2b8;
 	padding: 40px;
 	border-radius: 10px;
-	box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 	font-weight: 600;
 }
 
-.button-height {
+.custom-button > button {
 	margin-top: 30px;
-}
-
-.form-text {
-	color: #fff;
+	font-size: 1rem;
 }
