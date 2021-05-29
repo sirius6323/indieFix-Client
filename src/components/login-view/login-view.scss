@@ -1,19 +1,28 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	background-color: #0f1516;
+	color: #fff;
+	font-family: 'Cutive Mono', monospace;
 }
 
-.login-form {
-	display: flex;
-	position: absolute;
-	flex-direction: column;
-	align-items: left;
+.login-title {
+	padding-bottom: 20px;
 }
 
-.login-input {
-	padding: 5px;
-	width: 200px;
+.customHeight {
+	margin-top: 100px;
+	height: 60vh;
+}
+
+.custom-form {
+	border: 3px solid #17a2b8;
+	padding: 40px;
 	border-radius: 10px;
-	margin: 2px;
+	font-weight: 600;
+}
+
+.custom-button > button {
+	margin-top: 30px;
+	font-size: 1.1rem;
 }
