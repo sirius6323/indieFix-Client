@@ -87,7 +87,7 @@ class MainView extends React.Component {
 					</Col>
 				) : (
 					movies.map((movie) => (
-						<Col md={4}>
+						<Col md={3}>
 							<MovieCard
 								key={movie._id}
 								movie={movie}
