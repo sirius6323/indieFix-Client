@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register-form {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: left;
+}
+
+.register-input {
+  padding: 5px;
+  width: 200px;
+  border-radius: 10px;
+  margin: 2px;
+}
+.my-indie {
+  color: #4667b4;
+}
+/*# sourceMappingURL=index.1a46e624.css.map */
