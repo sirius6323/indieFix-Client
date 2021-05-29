@@ -23,31 +23,31 @@ export function LoginView(props) {
 						Login to indieFix
 					</h3>
 					<Form.Group controlId='formUsername' className='mb-3'>
-						<Form.Label className='form-text'>Username</Form.Label>
+						<Form.Label>Username</Form.Label>
 						<Form.Control
 							size='md'
 							type='text'
 							onChange={(e) => setUsername(e.target.value)}
 							placeholder='Enter Username'
 						/>
-						<Form.Text className='text-muted form-text'>
+						<Form.Text className='text-muted'>
 							We'll never share your user account info with anyone else.
 						</Form.Text>
 					</Form.Group>
 
 					<Form.Group controlId='formPassword' className='mb-3'>
-						<Form.Label className='form-text'>Password</Form.Label>
+						<Form.Label>Password</Form.Label>
 						<Form.Control
 							size='md'
 							type='password'
 							onChange={(e) => setPassword(e.target.value)}
 							placeholder='Enter Password'
 						/>
-						<Form.Text className='text-muted form-text'>
+						<Form.Text className='text-muted'>
 							Your password requires a minimum of 8 characters.
 						</Form.Text>
 					</Form.Group>
-					<div className='d-grid gap-2 button-height'>
+					<div className='d-grid gap-2 custom-button'>
 						<Button
 							variant='info primary'
 							type='submit'
@@ -58,7 +58,7 @@ export function LoginView(props) {
 							Submit
 						</Button>
 						<Button
-							variant='dark'
+							variant='danger'
 							type='secondary'
 							size='sm'
 							onClick={props.toggleRegister}
