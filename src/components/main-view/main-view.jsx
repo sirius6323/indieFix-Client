@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Navbar } from 'react-bootstrap';
 
 import { LoginView } from '../login-view/login-view';
 import { RegistrationView } from '../registration-view/registration-view';
@@ -75,30 +75,50 @@ class MainView extends React.Component {
 		if (movies.length === 0) return <div className='main-view' />;
 
 		return (
-			<Row className='main-view justify-content-md-center'>
-				{selectedMovie ? (
-					<Col md={8}>
-						<MovieView
-							movie={selectedMovie}
-							onBackClick={(newSelectedMovie) => {
-								this.setSelectedMovie(newSelectedMovie);
-							}}
-						/>
-					</Col>
-				) : (
-					movies.map((movie) => (
-						<Col md={3}>
-							<MovieCard
-								key={movie._id}
-								movie={movie}
-								onMovieClick={(newSelectedMovie) => {
+			<div className='main-view justify-content-md-center'>
+				<Navbar
+					bg='info'
+					expand='lg'
+					sticky='top'
+					variant='dark'
+					className='navbar shadow sm mb-5'
+				>
+					<Navbar.Brand href='http://localhost:1234' className='navbar-brand'>
+						indieFix
+					</Navbar.Brand>
+					<Navbar.Toggle aria-controls='basic-navbar-nav' />
+					<Navbar.Collapse
+						className='justify-content-end'
+						id='basic-navbar-nav'
+					></Navbar.Collapse>
+				</Navbar>
+				<Row className='main-view justify-content-md-center'>
+					{selectedMovie ? (
+						<Col md={8}>
+							<MovieView
+								movie={selectedMovie}
+								onBackClick={(newSelectedMovie) => {
 									this.setSelectedMovie(newSelectedMovie);
 								}}
 							/>
 						</Col>
-					))
-				)}
-			</Row>
+					) : (
+						movies.map((movie) => (
+							<Col md={3}>
+								{
+									<MovieCard
+										key={movie._id}
+										movie={movie}
+										onMovieClick={(newSelectedMovie) => {
+											this.setSelectedMovie(newSelectedMovie);
+										}}
+									/>
+								}
+							</Col>
+						))
+					)}
+				</Row>
+			</div>
 		);
 	}
 }
