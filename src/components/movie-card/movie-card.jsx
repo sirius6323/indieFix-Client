@@ -20,16 +20,10 @@ export class MovieCard extends React.Component {
 						<Button
 							onClick={() => onMovieClick(movie)}
 							variant='danger link'
-							size='md'
+							size='sm'
 							block
 						>
 							Movie Info
-						</Button>
-						<Button className='mb-2' block variant='danger'>
-							Director
-						</Button>
-						<Button className='mb-2' block variant='danger'>
-							Genre
 						</Button>
 					</Card.Body>
 				</Card>
