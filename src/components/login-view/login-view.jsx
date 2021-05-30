@@ -19,7 +19,7 @@ export function LoginView(props) {
 		<Container>
 			<div className='d-flex align-items-center justify-content-center customHeight'>
 				<Form className='custom-form custom-box-shadow'>
-					<h3 className='d-flex mb-3 text-align-center justify-content-center login-title'>
+					<h3 className='d-flex mb-3 text-align-center justify-content-center font-weight-bold login-title'>
 						Login to indieFix
 					</h3>
 					<Form.Group controlId='formUsername' className='mb-3'>
@@ -43,9 +43,6 @@ export function LoginView(props) {
 							onChange={(e) => setPassword(e.target.value)}
 							placeholder='Enter Password'
 						/>
-						<Form.Text className='text-muted'>
-							Your password requires a minimum of 8 characters.
-						</Form.Text>
 					</Form.Group>
 					<div className='d-grid gap-2 custom-button'>
 						<Button
