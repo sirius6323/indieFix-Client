@@ -1,0 +1,73 @@
+.movie-view {
+  font-size: 1.1em;
+}
+
+.custom-space {
+  text-align: center;
+}
+
+.movie-poster {
+  width: 250px;
+}
+
+@media all and (max-width: 360px) {
+  .movie-view {
+    font-size: 0.9em;
+  }
+
+  .movie-name {
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #0f1516;
+  color: #fff;
+  font-family: "Cutive Mono", monospace;
+}
+
+.login-title {
+  padding-bottom: 20px;
+}
+
+.customHeight {
+  margin-top: 100px;
+  height: 60vh;
+}
+
+.custom-form {
+  border: 3px solid #17a2b8;
+  padding: 40px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.custom-button > Button {
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register-form {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: left;
+}
+
+.register-input {
+  padding: 5px;
+  width: 200px;
+  border-radius: 10px;
+  margin: 2px;
+}
+.my-indie {
+  color: #4667b4;
+}
+/*# sourceMappingURL=index.b9ffae6c.css.map */
