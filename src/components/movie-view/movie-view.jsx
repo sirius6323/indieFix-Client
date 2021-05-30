@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Row, Col } from 'react-bootstrap';
 
 // Component to display single movie view
 export class MovieView extends React.Component {
@@ -28,16 +28,31 @@ export class MovieView extends React.Component {
 							<span className='text-white font-weight-bold'>Director: </span>
 							{movie.Director.Name}
 						</Card.Text>
-						<Button
-							block
-							variant='danger'
-							className='my-3'
-							onClick={() => {
-								onBackClick(null);
-							}}
-						>
-							Back
-						</Button>
+						<Row>
+							<Col>
+								<Button className='mb-2' size='sm' block variant='danger'>
+									Director
+								</Button>
+							</Col>
+							<Col>
+								<Button className='mb-2' size='sm' block variant='danger'>
+									Genre
+								</Button>
+							</Col>
+							<Col>
+								<Button
+									size='sm'
+									variant='danger'
+									className='mb-2'
+									block
+									onClick={() => {
+										onBackClick(null);
+									}}
+								>
+									Back To Movie List
+								</Button>
+							</Col>
+						</Row>
 					</Card.Body>
 				</Card>
 			</div>
