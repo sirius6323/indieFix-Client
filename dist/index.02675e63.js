@@ -1054,20 +1054,28 @@ try {
   var _reactDomDefault = _parcelHelpers.interopDefault(_reactDom);
   var _componentsMainViewMainView = require('./components/main-view/main-view');
   var _componentsMainViewMainViewDefault = _parcelHelpers.interopDefault(_componentsMainViewMainView);
+  var _reactBootstrap = require('react-bootstrap');
   require('./index.scss');
   var _jsxFileName = "C:\\Users\\galah.000\\Documents\\myProjects\\indieFix-Client\\src\\index.jsx";
   // Main component (will eventually use all others)
   class MyIndieFixApplication extends _reactDefault.default.Component {
     render() {
       return (
-        /*#__PURE__*/_reactDefault.default.createElement(_componentsMainViewMainViewDefault.default, {
+        /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Container, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 11,
-            columnNumber: 10
+            lineNumber: 13,
+            columnNumber: 4
           }
-        })
+        }, /*#__PURE__*/_reactDefault.default.createElement(_componentsMainViewMainViewDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14,
+            columnNumber: 5
+          }
+        }), ";")
       );
     }
   }
@@ -1081,7 +1089,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-dom":"2sg1U","./components/main-view/main-view":"67PhB","./index.scss":"5iJih","@parcel/transformer-js/lib/esmodule-helpers.js":"7kyIT","../../../../AppData/Roaming/npm/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7belF"}],"3b2NM":[function(require,module,exports) {
+},{"react":"3b2NM","react-dom":"2sg1U","./components/main-view/main-view":"67PhB","./index.scss":"5iJih","@parcel/transformer-js/lib/esmodule-helpers.js":"7kyIT","../../../../AppData/Roaming/npm/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7belF","react-bootstrap":"4n7hB"}],"3b2NM":[function(require,module,exports) {
 "use strict";
 if ("development" === 'production') {
   module.exports = require('./cjs/react.production.min.js');
@@ -26446,15 +26454,15 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 98,
-            columnNumber: 8
+            lineNumber: 99,
+            columnNumber: 9
           }
         })) : movies.map(movie => /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
           md: 3,
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 107,
+            lineNumber: 109,
             columnNumber: 8
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_movieCardMovieCard.MovieCard, {
@@ -26466,7 +26474,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 109,
+            lineNumber: 111,
             columnNumber: 10
           }
         })))))
