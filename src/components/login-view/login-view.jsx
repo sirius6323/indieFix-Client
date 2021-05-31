@@ -17,8 +17,8 @@ export function LoginView(props) {
 
 	return (
 		<Container>
-			<div className='d-flex align-items-center justify-content-center customHeight'>
-				<Form className='custom-form custom-box-shadow'>
+			<div className='d-flex align-items-center justify-content-center'>
+				<Form className='custom-form'>
 					<h3 className='d-flex mb-3 text-align-center justify-content-center font-weight-bold login-title'>
 						Login to indieFix
 					</h3>
@@ -76,5 +76,5 @@ LoginView.propTypes = {
 		Password: PropTypes.string.isRequired,
 	}),
 	onLoggedIn: PropTypes.func.isRequired,
-	onRegister: PropTypes.func,
+	onRegister: PropTypes.func.isRequired,
 };
