@@ -26439,7 +26439,7 @@ try {
             columnNumber: 5
           }
         }, selectedMovie ? /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
-          md: 8,
+          md: 6,
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -26458,7 +26458,7 @@ try {
             columnNumber: 9
           }
         })) : movies.map(movie => /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
-          md: 3,
+          md: 4,
           __self: this,
           __source: {
             fileName: _jsxFileName,
