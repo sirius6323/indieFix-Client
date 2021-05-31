@@ -19,7 +19,7 @@ export function RegistrationView(props) {
 
 	return (
 		<Container>
-			<div className='d flex align-items-center justify-content-center customHeight'>
+			<div className='d flex align-items-center justify-content-center'>
 				<Form className='custom-form'>
 					<h3 className='d-flex mb-3 text-align-center justify-content-center font-weight-bold register'>
 						Register to indieFix
