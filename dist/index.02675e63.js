@@ -26442,7 +26442,7 @@ try {
             columnNumber: 5
           }
         }, selectedMovie ? /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
-          md: 8,
+          md: 6,
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -26461,7 +26461,7 @@ try {
             columnNumber: 8
           }
         })) : movies.map(movie => /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
-          md: 3,
+          md: 4,
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -43193,7 +43193,7 @@ try {
           columnNumber: 3
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "d-flex align-items-center justify-content-center customHeight",
+        className: "d-flex align-items-center justify-content-center",
         __self: this,
         __source: {
           fileName: _jsxFileName,
@@ -43201,7 +43201,7 @@ try {
           columnNumber: 4
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form, {
-        className: "custom-form custom-box-shadow",
+        className: "custom-form",
         __self: this,
         __source: {
           fileName: _jsxFileName,
@@ -43371,7 +43371,7 @@ try {
           columnNumber: 3
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "d flex align-items-center justify-content-center customHeight",
+        className: "d flex align-items-center justify-content-center",
         __self: this,
         __source: {
           fileName: _jsxFileName,
