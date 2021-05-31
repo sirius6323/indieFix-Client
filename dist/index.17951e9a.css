@@ -1,30 +1,9 @@
-.size {
-  max-width: 250px;
-  height: 400px;
-}
-
-.custom-style {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.custom-style-2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.card-box {
-  height: 96%;
-}
-
-.card-space {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #0f1516;
+  color: #fff;
+  font-family: "Cutive Mono", monospace;
 }
 
 @media all and (max-width: 900px) {
@@ -37,6 +16,23 @@
   .size {
     max-width: 220px;
     height: 340px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #0f1516;
+  color: #fff;
+  font-family: "Cutive Mono", monospace;
+}
+
+.movie-view {
+  font-size: 1.1em;
+}
+
+@media all and (max-width: 360px) {
+  .movie-view {
+    font-size: 0.9em;
   }
 }
 * {
@@ -63,28 +59,37 @@
   font-weight: 600;
 }
 
-.custom-button > button {
+.custom-button > Button {
   margin-top: 30px;
   font-size: 1.1rem;
 }
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #0f1516;
+  color: #fff;
+  font-family: "Cutive Mono", monospace;
 }
 
-.register-form {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  align-items: left;
+.register {
+  padding-bottom: 20px;
 }
 
-.register-input {
-  padding: 5px;
-  width: 200px;
+.customHeight {
+  margin-top: 50px;
+  height: 60vh;
+}
+
+.custom-form {
+  border: 3px solid #17a2b8;
+  padding: 40px;
   border-radius: 10px;
-  margin: 2px;
+  font-weight: 600;
+}
+
+.custom-button > Button {
+  margin-top: 30px;
+  font-size: 1.1rem;
 }
 * {
   margin: 0;
