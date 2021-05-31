@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #0f1516;
+  color: #fff;
+  font-family: "Cutive Mono", monospace;
+}
+
+@media all and (max-width: 900px) {
+  .size {
+    max-width: 250px;
+    height: 340px;
+  }
+}
+@media all and (max-width: 766px) {
+  .size {
+    max-width: 220px;
+    height: 340px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #0f1516;
+  color: #fff;
+  font-family: "Cutive Mono", monospace;
+}
+
+.movie-view {
+  font-size: 1.1em;
+}
+
+@media all and (max-width: 360px) {
+  .movie-view {
+    font-size: 0.9em;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #0f1516;
+  color: #fff;
+  font-family: "Cutive Mono", monospace;
+}
+
+.login-title {
+  padding-bottom: 10px;
+}
+
+.custom-form {
+  border: 3px solid #17a2b8;
+  padding: 40px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.custom-button > Button {
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #0f1516;
+  color: #fff;
+  font-family: "Cutive Mono", monospace;
+}
+
+.register {
+  padding-bottom: 20px;
+}
+
+.custom-form {
+  border: 3px solid #17a2b8;
+  padding: 40px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+.custom-button > Button {
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #0f1516;
+  color: #fff;
+  font-family: "Cutive Mono", monospace;
+}
+
+.my-indie {
+  color: #4667b4;
+}
+/*# sourceMappingURL=index.17951e9a.css.map */
