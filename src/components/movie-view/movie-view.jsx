@@ -58,7 +58,7 @@ export class MovieView extends React.Component {
 										onBackClick(null);
 									}}
 								>
-									Movies List
+									Movies
 								</Button>
 							</Col>
 						</Row>
