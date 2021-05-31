@@ -10,21 +10,8 @@
 	font-size: 1.1em;
 }
 
-.custom-space {
-	text-align: center;
-}
-
-.movie-poster {
-	width: 250px;
-}
-
 @media all and (max-width: 360px) {
 	.movie-view {
 		font-size: 0.9em;
-	}
-
-	.movie-name {
-		font-size: 1.3em;
-		font-weight: 600;
 	}
 }
