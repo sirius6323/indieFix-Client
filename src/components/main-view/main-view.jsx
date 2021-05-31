@@ -83,7 +83,7 @@ class MainView extends React.Component {
 					expand='lg'
 					sticky='top'
 					variant='dark'
-					className='navbar shadow mb-5'
+					className='navbar mb-3'
 				>
 					<Navbar.Brand href='http://localhost:1234' className='navbar-brand'>
 						indieFix
