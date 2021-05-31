@@ -44,7 +44,7 @@
 }
 
 .login-title {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .custom-form {
@@ -75,21 +75,12 @@
   padding: 40px;
   border-radius: 10px;
   font-weight: 600;
-  margin-top: 50px;
 }
 
 .custom-button > Button {
   margin-top: 30px;
   font-size: 1.1rem;
 }
-* {
-  margin: 0;
-  padding: 0;
-  background-color: #0f1516;
-  color: #fff;
-  font-family: "Cutive Mono", monospace;
-}
-
 .my-indie {
   color: #4667b4;
 }
