@@ -26474,8 +26474,8 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 111,
-            columnNumber: 10
+            lineNumber: 110,
+            columnNumber: 9
           }
         })))))
       );
@@ -41523,7 +41523,7 @@ var Ellipsis = createButton('Ellipsis', '…', 'More');
 exports.Ellipsis = Ellipsis;
 var Next = createButton('Next', '›');
 exports.Next = Next;
-var Last = createButton('Last', '»');
+var Last = createButton('Last', '��');
 exports.Last = Last;
 },{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./SafeAnchor":"5VP5o"}],"3XBVG":[function(require,module,exports) {
 "use strict";
