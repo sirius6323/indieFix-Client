@@ -30,7 +30,15 @@ export class MovieView extends React.Component {
 						</Card.Text>
 						<Row>
 							<Col>
-								<Button className='mb-2' size='sm' block variant='danger'>
+								<Button
+									className='mb-2'
+									size='sm'
+									block
+									variant='danger'
+									// onClick={() => {
+									// 	onDirectorClick(director);
+									// }}
+								>
 									Director
 								</Button>
 							</Col>
@@ -49,7 +57,7 @@ export class MovieView extends React.Component {
 										onBackClick(null);
 									}}
 								>
-									Back To Movie List
+									Movies List
 								</Button>
 							</Col>
 						</Row>
