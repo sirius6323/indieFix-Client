@@ -46,10 +46,6 @@ class MainView extends React.Component {
 		this.setState({ register });
 	}
 
-	onDirectorClick() {
-		this.setState({ director });
-	}
-
 	onBackClick() {
 		this.setState({ selectedMovie: null });
 	}
