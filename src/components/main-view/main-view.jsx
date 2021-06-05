@@ -94,7 +94,7 @@ class MainView extends React.Component {
 				</Navbar>
 				<Row className='main-view justify-content-md-center'>
 					{selectedMovie ? (
-						<Col md={6}>
+						<Col md={6} sm={3}>
 							{
 								<MovieView
 									movie={selectedMovie}
@@ -106,10 +106,9 @@ class MainView extends React.Component {
 						</Col>
 					) : (
 						movies.map((movie) => (
-							<Col md={4}>
+							<Col md={4} key={movie._id}>
 								{
 									<MovieCard
-										key={movie._id}
 										movie={movie}
 										onMovieClick={(newSelectedMovie) => {
 											this.setSelectedMovie(newSelectedMovie);
