@@ -5,19 +5,6 @@
   color: #fff;
   font-family: "Cutive Mono", monospace;
 }
-
-@media all and (max-width: 900px) {
-  .size {
-    max-width: 250px;
-    height: 340px;
-  }
-}
-@media all and (max-width: 766px) {
-  .size {
-    max-width: 220px;
-    height: 340px;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -52,6 +39,7 @@
   padding: 40px;
   border-radius: 10px;
   font-weight: 600;
+  margin-top: 50px;
 }
 
 .custom-button > Button {
