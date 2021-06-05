@@ -94,7 +94,7 @@ class MainView extends React.Component {
 				</Navbar>
 				<Row className='main-view justify-content-md-center'>
 					{selectedMovie ? (
-						<Col md={6} sm={3}>
+						<Col md={6}>
 							{
 								<MovieView
 									movie={selectedMovie}
