@@ -43152,6 +43152,8 @@ try {
   var _propTypesDefault = _parcelHelpers.interopDefault(_propTypes);
   var _reactBootstrap = require('react-bootstrap');
   require('./movie-view.scss');
+  var _urlImagesParaNormanJpg = require('url:../images/paraNorman.jpg');
+  var _urlImagesParaNormanJpgDefault = _parcelHelpers.interopDefault(_urlImagesParaNormanJpg);
   var _jsxFileName = "C:\\Users\\galah.000\\Documents\\myProjects\\indieFix-Client\\src\\components\\movie-view\\movie-view.jsx";
   class MovieView extends _reactDefault.default.Component {
     render() {
@@ -43162,7 +43164,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12,
+            lineNumber: 13,
             columnNumber: 4
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card, {
@@ -43171,30 +43173,30 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13,
+            lineNumber: 14,
             columnNumber: 5
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card.Img, {
           variant: "top",
-          src: movie.ImageURL,
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 14,
-            columnNumber: 6
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card.Body, {
+          src: _urlImagesParaNormanJpgDefault.default,
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 15,
             columnNumber: 6
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card.Title, {
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card.Body, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 16,
+            columnNumber: 6
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card.Title, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 17,
             columnNumber: 7
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
@@ -43202,14 +43204,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17,
+            lineNumber: 18,
             columnNumber: 8
           }
         }, "Title: "), movie.Title), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card.Text, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 7
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
@@ -43217,14 +43219,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 22,
             columnNumber: 8
           }
         }, "Description: "), movie.Description), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card.Text, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 25,
             columnNumber: 7
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
@@ -43232,14 +43234,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25,
+            lineNumber: 26,
             columnNumber: 8
           }
         }, "Genre: "), movie.Genre.Name), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card.Text, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28,
+            lineNumber: 29,
             columnNumber: 7
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
@@ -43247,21 +43249,21 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29,
+            lineNumber: 30,
             columnNumber: 8
           }
         }, "Director: "), movie.Director.Name), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32,
+            lineNumber: 33,
             columnNumber: 7
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33,
+            lineNumber: 34,
             columnNumber: 8
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Button, {
@@ -43272,14 +43274,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34,
+            lineNumber: 35,
             columnNumber: 9
           }
         }, "Director")), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 46,
+            lineNumber: 47,
             columnNumber: 8
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Button, {
@@ -43290,14 +43292,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 47,
+            lineNumber: 48,
             columnNumber: 9
           }
         }, "Genre")), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 51,
+            lineNumber: 52,
             columnNumber: 8
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Button, {
@@ -43311,7 +43313,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 52,
+            lineNumber: 53,
             columnNumber: 9
           }
         }, "Movies"))))))
@@ -43340,7 +43342,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"7kyIT","../../../../../../AppData/Roaming/npm/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7belF","prop-types":"4dfy5","react-bootstrap":"4n7hB","./movie-view.scss":"4iZ2Z"}],"4iZ2Z":[function() {},{}],"6M7fu":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"7kyIT","../../../../../../AppData/Roaming/npm/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7belF","prop-types":"4dfy5","react-bootstrap":"4n7hB","./movie-view.scss":"4iZ2Z","url:../images/paraNorman.jpg":"2nghR"}],"4iZ2Z":[function() {},{}],"6M7fu":[function(require,module,exports) {
 var helpers = require("../../../../../../AppData/Roaming/npm/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
