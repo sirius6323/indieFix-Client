@@ -6,17 +6,8 @@
   font-family: "Cutive Mono", monospace;
 }
 
-@media all and (max-width: 900px) {
-  .size {
-    max-width: 250px;
-    height: 340px;
-  }
-}
-@media all and (max-width: 766px) {
-  .size {
-    max-width: 220px;
-    height: 340px;
-  }
+.movie-poster {
+  width: 250px;
 }
 * {
   margin: 0;
@@ -26,14 +17,8 @@
   font-family: "Cutive Mono", monospace;
 }
 
-.movie-view {
-  font-size: 1.1em;
-}
-
-@media all and (max-width: 360px) {
-  .movie-view {
-    font-size: 0.9em;
-  }
+.movie-poster {
+  width: 250px;
 }
 * {
   margin: 0;
