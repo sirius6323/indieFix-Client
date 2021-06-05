@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card, CardDeck } from 'react-bootstrap';
 import './movie-card.scss';
+import ParaNorman from 'url:../images/paraNorman.jpg';
 
 export class MovieCard extends React.Component {
 	render() {
@@ -13,7 +14,7 @@ export class MovieCard extends React.Component {
 					className='d-flex justify-content-center align-items-center'
 					border='info'
 				>
-					<Card.Img variant='top' src={movie.ImageURL} />
+					<Card.Img className='movie-poster' variant='top' src={ParaNorman} />
 					<Card.Body>
 						<Card.Title>{movie.Title}</Card.Title>
 						<Card.Text>{movie.Description.slice(0, 70)} ...'</Card.Text>
