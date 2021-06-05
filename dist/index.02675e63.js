@@ -26440,6 +26440,7 @@ try {
           }
         }, selectedMovie ? /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
           md: 6,
+          sm: 3,
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -26459,6 +26460,7 @@ try {
           }
         })) : movies.map(movie => /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
           md: 4,
+          key: movie._id,
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -26466,7 +26468,6 @@ try {
             columnNumber: 8
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_movieCardMovieCard.MovieCard, {
-          key: movie._id,
           movie: movie,
           onMovieClick: newSelectedMovie => {
             this.setSelectedMovie(newSelectedMovie);
