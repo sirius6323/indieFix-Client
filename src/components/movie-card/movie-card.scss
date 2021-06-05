@@ -5,17 +5,3 @@
 	color: #fff;
 	font-family: 'Cutive Mono', monospace;
 }
-
-@media all and (max-width: 900px) {
-	.size {
-		max-width: 250px;
-		height: 340px;
-	}
-}
-
-@media all and (max-width: 766px) {
-	.size {
-		max-width: 220px;
-		height: 340px;
-	}
-}
