@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Button, Row, Col } from 'react-bootstrap';
 import './movie-view.scss';
+import ParaNorman from 'url:../images/paraNorman.jpg';
 
 // Component to display single movie view
 export class MovieView extends React.Component {
@@ -11,7 +12,7 @@ export class MovieView extends React.Component {
 		return (
 			<div className='movie-view'>
 				<Card border='info' className='movie-card my-5'>
-					<Card.Img variant='top' src={movie.ImageURL} />
+					<Card.Img className='movie-poster' variant='top' src={ParaNorman} />
 					<Card.Body>
 						<Card.Title>
 							<span className='text-white font-weight-bold'>Title: </span>
