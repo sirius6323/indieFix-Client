@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MainView from './components/main-view/main-view';
-import Container from 'react-bootstrap/Container';
+import { Container } from 'react-bootstrap';
 
 // Import statement to bundle './index.scss'
 import './index.scss';
