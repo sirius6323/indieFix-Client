@@ -5,6 +5,10 @@
   color: #fff;
   font-family: "Cutive Mono", monospace;
 }
+
+.movie-poster {
+  width: 250px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,14 +17,8 @@
   font-family: "Cutive Mono", monospace;
 }
 
-.movie-view {
-  font-size: 1.1em;
-}
-
-@media all and (max-width: 360px) {
-  .movie-view {
-    font-size: 0.9em;
-  }
+.movie-poster {
+  width: 250px;
 }
 * {
   margin: 0;
