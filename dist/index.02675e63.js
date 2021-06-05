@@ -1075,7 +1075,7 @@ try {
             lineNumber: 14,
             columnNumber: 5
           }
-        }), ";")
+        }))
       );
     }
   }
