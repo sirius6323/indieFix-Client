@@ -29704,6 +29704,8 @@ var _AccordionCollapse = _interopRequireDefault(require("./AccordionCollapse"));
 
 var _AccordionContext = _interopRequireDefault(require("./AccordionContext"));
 
+var _excluded = ["as", "activeKey", "bsPrefix", "children", "className", "onSelect"];
+
 var Accordion = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
   var _useUncontrolled = (0, _uncontrollable.useUncontrolled)(props, {
     activeKey: 'onSelect'
@@ -29715,7 +29717,7 @@ var Accordion = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
       children = _useUncontrolled.children,
       className = _useUncontrolled.className,
       onSelect = _useUncontrolled.onSelect,
-      controlledProps = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, ["as", "activeKey", "bsPrefix", "children", "className", "onSelect"]);
+      controlledProps = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, _excluded);
 
   var finalClassName = (0, _classnames.default)(className, (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'accordion'));
   return /*#__PURE__*/_react.default.createElement(_AccordionContext.default.Provider, {
@@ -30510,6 +30512,8 @@ var _SelectableContext = _interopRequireDefault(require("./SelectableContext"));
 
 var _AccordionContext = _interopRequireDefault(require("./AccordionContext"));
 
+var _excluded = ["as", "children", "eventKey", "onClick"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -30534,7 +30538,7 @@ var AccordionToggle = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref
       children = _ref.children,
       eventKey = _ref.eventKey,
       onClick = _ref.onClick,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["as", "children", "eventKey", "onClick"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var accordionOnClick = useAccordionToggle(eventKey, onClick);
 
   if (Component === 'button') {
@@ -30609,6 +30613,8 @@ var _AccordionContext = _interopRequireDefault(require("./AccordionContext"));
 
 var _SelectableContext = _interopRequireDefault(require("./SelectableContext"));
 
+var _excluded = ["children", "eventKey"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -30616,7 +30622,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 var AccordionCollapse = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var children = _ref.children,
       eventKey = _ref.eventKey,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["children", "eventKey"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var contextEventKey = (0, _react.useContext)(_AccordionContext.default); // Empty SelectableContext is to prevent elements in the collapse
   // from collapsing the accordion when clicked.
 
@@ -30657,6 +30663,8 @@ var _transitionEndListener = _interopRequireDefault(require("./transitionEndList
 var _createChainedFunction = _interopRequireDefault(require("./createChainedFunction"));
 
 var _triggerBrowserReflow = _interopRequireDefault(require("./triggerBrowserReflow"));
+
+var _excluded = ["onEnter", "onEntering", "onEntered", "onExit", "onExiting", "className", "children", "dimension", "getDimensionValue"];
 
 var _collapseStyles;
 
@@ -30700,7 +30708,7 @@ var Collapse = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       dimension = _ref$dimension === void 0 ? 'height' : _ref$dimension,
       _ref$getDimensionValu = _ref.getDimensionValue,
       getDimensionValue = _ref$getDimensionValu === void 0 ? getDefaultDimensionValue : _ref$getDimensionValu,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["onEnter", "onEntering", "onEntered", "onExit", "onExiting", "className", "children", "dimension", "getDimensionValue"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   /* Compute dimension */
   var computedDimension = typeof dimension === 'function' ? dimension() : dimension;
@@ -31269,7 +31277,10 @@ Transition.propTypes = "development" !== "production" ? {
   *     [test/CSSTransition-test.js](https://github.com/reactjs/react-transition-group/blob/13435f897b3ab71f6e19d724f145596f5910581c/test/CSSTransition-test.js#L362-L437)).
   */
   nodeRef: _propTypes.default.shape({
-    current: typeof Element === 'undefined' ? _propTypes.default.any : _propTypes.default.instanceOf(Element)
+    current: typeof Element === 'undefined' ? _propTypes.default.any : function (propValue, key, componentName, location, propFullName, secret) {
+      var value = propValue[key];
+      return _propTypes.default.instanceOf(value && ('ownerDocument' in value) ? value.ownerDocument.defaultView.Element : Element)(propValue, key, componentName, location, propFullName, secret);
+    }
   }),
   /**
   * A `function` child can be used instead of a React element. This function is
@@ -31829,6 +31840,7 @@ var _createWithBsPrefix = _interopRequireDefault(require("./createWithBsPrefix")
 
 var _SafeAnchor = _interopRequireDefault(require("./SafeAnchor"));
 
+var _excluded = ["bsPrefix", "show", "closeLabel", "className", "children", "variant", "onClose", "dismissible", "transition"];
 var DivStyledAsH4 = (0, _divWithClassName.default)('h4');
 DivStyledAsH4.displayName = 'DivStyledAsH4';
 var AlertHeading = (0, _createWithBsPrefix.default)('alert-heading', {
@@ -31856,7 +31868,7 @@ var Alert = /*#__PURE__*/_react.default.forwardRef(function (uncontrolledProps, 
       onClose = _useUncontrolled.onClose,
       dismissible = _useUncontrolled.dismissible,
       transition = _useUncontrolled.transition,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, ["bsPrefix", "show", "closeLabel", "className", "children", "variant", "onClose", "dismissible", "transition"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, _excluded);
 
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'alert');
   var handleClose = (0, _useEventCallback.default)(function (e) {
@@ -31959,6 +31971,8 @@ var _transitionEndListener = _interopRequireDefault(require("./transitionEndList
 
 var _triggerBrowserReflow = _interopRequireDefault(require("./triggerBrowserReflow"));
 
+var _excluded = ["className", "children"];
+
 var _fadeStyles;
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -31977,7 +31991,7 @@ var fadeStyles = (_fadeStyles = {}, _fadeStyles[_Transition.ENTERING] = 'show', 
 var Fade = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var className = _ref.className,
       children = _ref.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["className", "children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var handleEnter = (0, _react.useCallback)(function (node) {
     (0, _triggerBrowserReflow.default)(node);
     if (props.onEnter) props.onEnter(node);
@@ -32017,6 +32031,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _excluded = ["label", "onClick", "className"];
 var propTypes = {
   label: _propTypes.default.string.isRequired,
   onClick: _propTypes.default.func
@@ -32029,7 +32044,7 @@ var CloseButton = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var label = _ref.label,
       onClick = _ref.onClick,
       className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["label", "onClick", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
     ref: ref,
     type: "button",
@@ -32093,6 +32108,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["className", "bsPrefix", "as"];
+
 var pascalCase = function pascalCase(str) {
   return str[0].toUpperCase() + (0, _camelize.default)(str).slice(1);
 };
@@ -32110,7 +32127,7 @@ function createWithBsPrefix(prefix, _temp) {
         bsPrefix = _ref2.bsPrefix,
         _ref2$as = _ref2.as,
         Tag = _ref2$as === void 0 ? Component || 'div' : _ref2$as,
-        props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, ["className", "bsPrefix", "as"]);
+        props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded);
     var resolvedPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, prefix);
     return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
       ref: ref,
@@ -32154,6 +32171,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _createChainedFunction = _interopRequireDefault(require("./createChainedFunction"));
 
+var _excluded = ["as", "disabled", "onKeyDown"];
+
 function isTrivialHref(href) {
   return !href || href.trim() === '#';
 }
@@ -32171,7 +32190,7 @@ var SafeAnchor = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       Component = _ref$as === void 0 ? 'a' : _ref$as,
       disabled = _ref.disabled,
       onKeyDown = _ref.onKeyDown,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["as", "disabled", "onKeyDown"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var handleClick = function handleClick(event) {
     var href = props.href,
@@ -32240,6 +32259,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "variant", "pill", "className", "as"];
 var defaultProps = {
   pill: false
 };
@@ -32251,7 +32271,7 @@ var Badge = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       className = _ref.className,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'span' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "variant", "pill", "className", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'badge');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
     ref: ref
@@ -32285,6 +32305,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 var _BreadcrumbItem = _interopRequireDefault(require("./BreadcrumbItem"));
 
+var _excluded = ["bsPrefix", "className", "listProps", "children", "label", "as"];
 var defaultProps = {
   label: 'breadcrumb',
   listProps: {}
@@ -32298,7 +32319,7 @@ var Breadcrumb = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       label = _ref.label,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'nav' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "listProps", "children", "label", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'breadcrumb');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
     "aria-label": label,
@@ -32335,6 +32356,7 @@ var _SafeAnchor = _interopRequireDefault(require("./SafeAnchor"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "active", "children", "className", "as", "linkAs", "linkProps", "href", "title", "target"];
 var defaultProps = {
   active: false,
   linkProps: {}
@@ -32353,7 +32375,7 @@ var BreadcrumbItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref)
       href = _ref.href,
       title = _ref.title,
       target = _ref.target,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "active", "children", "className", "as", "linkAs", "linkProps", "href", "title", "target"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'breadcrumb-item');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
     ref: ref
@@ -32394,6 +32416,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 var _SafeAnchor = _interopRequireDefault(require("./SafeAnchor"));
 
+var _excluded = ["bsPrefix", "variant", "size", "active", "className", "block", "type", "as"];
 var defaultProps = {
   variant: 'primary',
   active: false,
@@ -32409,7 +32432,7 @@ var Button = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       block = _ref.block,
       type = _ref.type,
       as = _ref.as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "variant", "size", "active", "className", "block", "type", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'btn');
   var classes = (0, _classnames.default)(className, prefix, active && 'active', variant && prefix + "-" + variant, block && prefix + "-block", size && prefix + "-" + size);
 
@@ -32460,6 +32483,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "size", "toggle", "vertical", "className", "as"];
 var defaultProps = {
   vertical: false,
   toggle: false,
@@ -32474,7 +32498,7 @@ var ButtonGroup = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       className = _ref.className,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
-      rest = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "size", "toggle", "vertical", "className", "as"]);
+      rest = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'btn-group');
   var baseClass = prefix;
   if (vertical) baseClass = prefix + "-vertical";
@@ -32507,6 +32531,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className"];
 var defaultProps = {
   role: 'toolbar'
 };
@@ -32514,7 +32539,7 @@ var defaultProps = {
 var ButtonToolbar = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'btn-toolbar');
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, {
     ref: ref,
@@ -32553,6 +32578,8 @@ var _CardContext = _interopRequireDefault(require("./CardContext"));
 
 var _CardImg = _interopRequireDefault(require("./CardImg"));
 
+var _excluded = ["bsPrefix", "className", "bg", "text", "border", "body", "children", "as"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -32589,7 +32616,7 @@ var Card = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       children = _ref.children,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "bg", "text", "border", "body", "children", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'card');
   var cardContext = (0, _react.useMemo)(function () {
     return {
@@ -32656,6 +32683,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "variant", "as"];
 var defaultProps = {
   variant: null
 };
@@ -32667,7 +32695,7 @@ function (_ref, ref) {
       variant = _ref.variant,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'img' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "variant", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'card-img');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
     ref: ref,
@@ -32765,6 +32793,8 @@ var _ThemeProvider = require("./ThemeProvider");
 var _transitionEndListener = _interopRequireDefault(require("./transitionEndListener"));
 
 var _triggerBrowserReflow = _interopRequireDefault(require("./triggerBrowserReflow"));
+
+var _excluded = ["as", "bsPrefix", "slide", "fade", "controls", "indicators", "activeIndex", "onSelect", "onSlide", "onSlid", "interval", "keyboard", "onKeyDown", "pause", "onMouseOver", "onMouseOut", "wrap", "touch", "onTouchStart", "onTouchMove", "onTouchEnd", "prevIcon", "prevLabel", "nextIcon", "nextLabel", "className", "children"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -32937,7 +32967,7 @@ function CarouselFunc(uncontrolledProps, ref) {
       nextLabel = _useUncontrolled.nextLabel,
       className = _useUncontrolled.className,
       children = _useUncontrolled.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, ["as", "bsPrefix", "slide", "fade", "controls", "indicators", "activeIndex", "onSelect", "onSlide", "onSlid", "interval", "keyboard", "onKeyDown", "pause", "onMouseOver", "onMouseOut", "wrap", "touch", "onTouchStart", "onTouchMove", "onTouchEnd", "prevIcon", "prevLabel", "nextIcon", "nextLabel", "className", "children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, _excluded);
 
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'carousel');
   var nextDirectionRef = (0, _react.useRef)(null);
@@ -33490,13 +33520,15 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["as", "bsPrefix", "children", "className"];
+
 var CarouselItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
       bsPrefix = _ref.bsPrefix,
       children = _ref.children,
       className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["as", "bsPrefix", "children", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var finalClassName = (0, _classnames.default)(className, (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'carousel-item'));
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
     ref: ref
@@ -33567,6 +33599,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "as"];
 var DEVICE_SIZES = ['xl', 'lg', 'md', 'sm', 'xs'];
 
 var Col = /*#__PURE__*/_react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
@@ -33575,7 +33608,7 @@ function (_ref, ref) {
       className = _ref.className,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'col');
   var spans = [];
   var classes = [];
@@ -33649,6 +33682,8 @@ var _ThemeProvider = require("./ThemeProvider");
 
 var _createWithBsPrefix = _interopRequireDefault(require("./createWithBsPrefix"));
 
+var _excluded = ["bsPrefix", "drop", "show", "className", "alignRight", "onSelect", "onToggle", "focusFirstItemOnShow", "as", "navbar"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -33685,7 +33720,7 @@ var Dropdown = /*#__PURE__*/_react.default.forwardRef(function (pProps, ref) {
       _useUncontrolled$as = _useUncontrolled.as,
       Component = _useUncontrolled$as === void 0 ? 'div' : _useUncontrolled$as,
       _4 = _useUncontrolled.navbar,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, ["bsPrefix", "drop", "show", "className", "alignRight", "onSelect", "onToggle", "focusFirstItemOnShow", "as", "navbar"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, _excluded);
 
   var onSelectCtx = (0, _react.useContext)(_SelectableContext.default);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'dropdown');
@@ -36558,6 +36593,8 @@ var _NavContext = _interopRequireDefault(require("./NavContext"));
 
 var _SafeAnchor = _interopRequireDefault(require("./SafeAnchor"));
 
+var _excluded = ["bsPrefix", "className", "children", "eventKey", "disabled", "href", "onClick", "onSelect", "active", "as"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -36578,7 +36615,7 @@ var DropdownItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       onSelect = _ref.onSelect,
       propActive = _ref.active,
       Component = _ref.as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "children", "eventKey", "disabled", "href", "onClick", "onSelect", "active", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'dropdown-item');
   var onSelectCtx = (0, _react.useContext)(_SelectableContext.default);
   var navContext = (0, _react.useContext)(_NavContext.default);
@@ -36648,6 +36685,7 @@ var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
 var _ThemeProvider = require("./ThemeProvider");
 var _useWrappedRefWithWarning = _interopRequireDefault(require("./useWrappedRefWithWarning"));
 var _usePopperMarginModifiers = _interopRequireDefault(require("./usePopperMarginModifiers"));
+var _excluded = ["bsPrefix", "className", "align", "alignRight", "rootCloseEvent", "flip", "show", "renderOnMount", "as", "popperConfig"];
 function _getRequireWildcardCache(nodeInterop) {
   if (typeof WeakMap !== "function") return null;
   var cacheBabelInterop = new WeakMap();
@@ -36704,7 +36742,7 @@ var defaultProps = {
   flip: true
 };
 var DropdownMenu = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
-  var bsPrefix = _ref.bsPrefix, className = _ref.className, align = _ref.align, alignRight = _ref.alignRight, rootCloseEvent = _ref.rootCloseEvent, flip = _ref.flip, showProps = _ref.show, renderOnMount = _ref.renderOnMount, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, popperConfig = _ref.popperConfig, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "align", "alignRight", "rootCloseEvent", "flip", "show", "renderOnMount", "as", "popperConfig"]);
+  var bsPrefix = _ref.bsPrefix, className = _ref.className, align = _ref.align, alignRight = _ref.alignRight, rootCloseEvent = _ref.rootCloseEvent, flip = _ref.flip, showProps = _ref.show, renderOnMount = _ref.renderOnMount, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, popperConfig = _ref.popperConfig, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var isNavbar = (0, _react.useContext)(_NavbarContext.default);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'dropdown-menu');
   var _usePopperMarginModif = (0, _usePopperMarginModifiers.default)(), popperRef = _usePopperMarginModif[0], marginModifiers = _usePopperMarginModif[1];
@@ -37039,6 +37077,8 @@ var _ThemeProvider = require("./ThemeProvider");
 
 var _useWrappedRefWithWarning = _interopRequireDefault(require("./useWrappedRefWithWarning"));
 
+var _excluded = ["bsPrefix", "split", "className", "childBsPrefix", "as"];
+
 var DropdownToggle = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       split = _ref.split,
@@ -37046,7 +37086,7 @@ var DropdownToggle = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref)
       childBsPrefix = _ref.childBsPrefix,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? _Button.default : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "split", "className", "childBsPrefix", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'dropdown-toggle');
 
   if (childBsPrefix !== undefined) {
@@ -37113,6 +37153,8 @@ var _Dropdown = _interopRequireDefault(require("./Dropdown"));
 var _DropdownToggle = _interopRequireDefault(require("./DropdownToggle"));
 
 var _DropdownMenu = _interopRequireWildcard(require("./DropdownMenu"));
+
+var _excluded = ["title", "children", "bsPrefix", "rootCloseEvent", "variant", "size", "menuAlign", "menuRole", "renderMenuOnMount", "disabled", "href", "id"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -37192,7 +37234,7 @@ var DropdownButton = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref)
       disabled = _ref.disabled,
       href = _ref.href,
       id = _ref.id,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["title", "children", "bsPrefix", "rootCloseEvent", "variant", "size", "menuAlign", "menuRole", "renderMenuOnMount", "disabled", "href", "id"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_Dropdown.default, (0, _extends2.default)({
     ref: ref
   }, props), /*#__PURE__*/_react.default.createElement(_DropdownToggle.default, {
@@ -37249,6 +37291,7 @@ var _ThemeProvider = require("./ThemeProvider");
 
 var _createWithBsPrefix = _interopRequireDefault(require("./createWithBsPrefix"));
 
+var _excluded = ["bsPrefix", "inline", "className", "validated", "as"];
 var FormRow = (0, _createWithBsPrefix.default)('form-row');
 var defaultProps = {
   inline: false
@@ -37261,7 +37304,7 @@ var FormImpl = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       validated = _ref.validated,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'form' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "inline", "className", "validated", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'form');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, props, {
     ref: ref,
@@ -37310,6 +37353,8 @@ var _FormContext = _interopRequireDefault(require("./FormContext"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["id", "bsPrefix", "bsCustomPrefix", "inline", "disabled", "isValid", "isInvalid", "feedbackTooltip", "feedback", "className", "style", "title", "type", "label", "children", "custom", "as"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -37340,7 +37385,7 @@ var FormCheck = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       propCustom = _ref.custom,
       _ref$as = _ref.as,
       as = _ref$as === void 0 ? 'input' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["id", "bsPrefix", "bsCustomPrefix", "inline", "disabled", "isValid", "isInvalid", "feedbackTooltip", "feedback", "className", "style", "title", "type", "label", "children", "custom", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var custom = type === 'switch' ? true : propCustom;
 
   var _ref2 = custom ? [bsCustomPrefix, 'custom-control'] : [bsPrefix, 'form-check'],
@@ -37494,6 +37539,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _excluded = ["as", "className", "type", "tooltip"];
 var propTypes = {
   /**
    * Specify whether the feedback is for valid or invalid fields
@@ -37516,7 +37562,7 @@ function (_ref, ref) {
       type = _ref$type === void 0 ? 'valid' : _ref$type,
       _ref$tooltip = _ref.tooltip,
       tooltip = _ref$tooltip === void 0 ? false : _ref$tooltip,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["as", "className", "type", "tooltip"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, props, {
     ref: ref,
     className: (0, _classnames.default)(className, type + "-" + (tooltip ? 'tooltip' : 'feedback'))
@@ -37548,6 +37594,8 @@ var _FormContext = _interopRequireDefault(require("./FormContext"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["id", "bsPrefix", "bsCustomPrefix", "className", "type", "isValid", "isInvalid", "isStatic", "as"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -37566,7 +37614,7 @@ var FormCheckInput = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref)
       isStatic = _ref.isStatic,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'input' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["id", "bsPrefix", "bsCustomPrefix", "className", "type", "isValid", "isInvalid", "isStatic", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useContext = (0, _react.useContext)(_FormContext.default),
       controlId = _useContext.controlId,
@@ -37626,6 +37674,8 @@ var _FormContext = _interopRequireDefault(require("./FormContext"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "bsCustomPrefix", "className", "htmlFor"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -37635,7 +37685,7 @@ var FormCheckLabel = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref)
       bsCustomPrefix = _ref.bsCustomPrefix,
       className = _ref.className,
       htmlFor = _ref.htmlFor,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "bsCustomPrefix", "className", "htmlFor"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useContext = (0, _react.useContext)(_FormContext.default),
       controlId = _useContext.controlId,
@@ -37685,6 +37735,8 @@ var _FormContext = _interopRequireDefault(require("./FormContext"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["id", "bsPrefix", "bsCustomPrefix", "disabled", "isValid", "isInvalid", "feedbackTooltip", "feedback", "className", "style", "label", "children", "custom", "lang", "data-browse", "as", "inputAs"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -37713,7 +37765,7 @@ var FormFile = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       Component = _ref$as === void 0 ? 'div' : _ref$as,
       _ref$inputAs = _ref.inputAs,
       inputAs = _ref$inputAs === void 0 ? 'input' : _ref$inputAs,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["id", "bsPrefix", "bsCustomPrefix", "disabled", "isValid", "isInvalid", "feedbackTooltip", "feedback", "className", "style", "label", "children", "custom", "lang", "data-browse", "as", "inputAs"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _ref2 = custom ? [bsCustomPrefix, 'custom'] : [bsPrefix, 'form-file'],
       prefix = _ref2[0],
@@ -37781,6 +37833,8 @@ var _FormContext = _interopRequireDefault(require("./FormContext"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["id", "bsPrefix", "bsCustomPrefix", "className", "isValid", "isInvalid", "lang", "as"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -37795,7 +37849,7 @@ var FormFileInput = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) 
       lang = _ref.lang,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'input' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["id", "bsPrefix", "bsCustomPrefix", "className", "isValid", "isInvalid", "lang", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useContext = (0, _react.useContext)(_FormContext.default),
       controlId = _useContext.controlId,
@@ -37841,6 +37895,8 @@ var _FormContext = _interopRequireDefault(require("./FormContext"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "bsCustomPrefix", "className", "htmlFor"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -37850,7 +37906,7 @@ var FormFileLabel = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) 
       bsCustomPrefix = _ref.bsCustomPrefix,
       className = _ref.className,
       htmlFor = _ref.htmlFor,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "bsCustomPrefix", "className", "htmlFor"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useContext = (0, _react.useContext)(_FormContext.default),
       controlId = _useContext.controlId,
@@ -37887,6 +37943,7 @@ var _warning = _interopRequireDefault(require("warning"));
 var _Feedback = _interopRequireDefault(require("./Feedback"));
 var _FormContext = _interopRequireDefault(require("./FormContext"));
 var _ThemeProvider = require("./ThemeProvider");
+var _excluded = ["bsPrefix", "bsCustomPrefix", "type", "size", "htmlSize", "id", "className", "isValid", "isInvalid", "plaintext", "readOnly", "custom", "as"];
 function _getRequireWildcardCache(nodeInterop) {
   if (typeof WeakMap !== "function") return null;
   var cacheBabelInterop = new WeakMap();
@@ -37927,7 +37984,7 @@ function _interopRequireWildcard(obj, nodeInterop) {
   return newObj;
 }
 var FormControl = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
-  var bsPrefix = _ref.bsPrefix, bsCustomPrefix = _ref.bsCustomPrefix, type = _ref.type, size = _ref.size, htmlSize = _ref.htmlSize, id = _ref.id, className = _ref.className, _ref$isValid = _ref.isValid, isValid = _ref$isValid === void 0 ? false : _ref$isValid, _ref$isInvalid = _ref.isInvalid, isInvalid = _ref$isInvalid === void 0 ? false : _ref$isInvalid, plaintext = _ref.plaintext, readOnly = _ref.readOnly, custom = _ref.custom, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'input' : _ref$as, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "bsCustomPrefix", "type", "size", "htmlSize", "id", "className", "isValid", "isInvalid", "plaintext", "readOnly", "custom", "as"]);
+  var bsPrefix = _ref.bsPrefix, bsCustomPrefix = _ref.bsCustomPrefix, type = _ref.type, size = _ref.size, htmlSize = _ref.htmlSize, id = _ref.id, className = _ref.className, _ref$isValid = _ref.isValid, isValid = _ref$isValid === void 0 ? false : _ref$isValid, _ref$isInvalid = _ref.isInvalid, isInvalid = _ref$isInvalid === void 0 ? false : _ref$isInvalid, plaintext = _ref.plaintext, readOnly = _ref.readOnly, custom = _ref.custom, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'input' : _ref$as, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var _useContext = (0, _react.useContext)(_FormContext.default), controlId = _useContext.controlId;
   var _ref2 = custom ? [bsCustomPrefix, 'custom'] : [bsPrefix, 'form-control'], prefix = _ref2[0], defaultPrefix = _ref2[1];
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(prefix, defaultPrefix);
@@ -37987,6 +38044,8 @@ var _FormContext = _interopRequireDefault(require("./FormContext"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "children", "controlId", "as"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -37998,7 +38057,7 @@ var FormGroup = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       controlId = _ref.controlId,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "children", "controlId", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'form-group');
   var context = (0, _react.useMemo)(function () {
     return {
@@ -38030,6 +38089,7 @@ var _warning = _interopRequireDefault(require("warning"));
 var _Col = _interopRequireDefault(require("./Col"));
 var _FormContext = _interopRequireDefault(require("./FormContext"));
 var _ThemeProvider = require("./ThemeProvider");
+var _excluded = ["as", "bsPrefix", "column", "srOnly", "className", "htmlFor"];
 function _getRequireWildcardCache(nodeInterop) {
   if (typeof WeakMap !== "function") return null;
   var cacheBabelInterop = new WeakMap();
@@ -38074,7 +38134,7 @@ var defaultProps = {
   srOnly: false
 };
 var FormLabel = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
-  var _ref$as = _ref.as, Component = _ref$as === void 0 ? 'label' : _ref$as, bsPrefix = _ref.bsPrefix, column = _ref.column, srOnly = _ref.srOnly, className = _ref.className, htmlFor = _ref.htmlFor, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["as", "bsPrefix", "column", "srOnly", "className", "htmlFor"]);
+  var _ref$as = _ref.as, Component = _ref$as === void 0 ? 'label' : _ref$as, bsPrefix = _ref.bsPrefix, column = _ref.column, srOnly = _ref.srOnly, className = _ref.className, htmlFor = _ref.htmlFor, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var _useContext = (0, _react.useContext)(_FormContext.default), controlId = _useContext.controlId;
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'form-label');
   var columnClass = 'col-form-label';
@@ -38084,6 +38144,7 @@ var FormLabel = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   htmlFor = htmlFor || controlId;
   if (column) return (
     /*#__PURE__*/_react.default.createElement(_Col.default, (0, _extends2.default)({
+      ref: ref,
       as: "label",
       className: classes,
       htmlFor: htmlFor
@@ -38123,6 +38184,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "as", "muted"];
+
 var FormText = /*#__PURE__*/_react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
 function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
@@ -38130,7 +38193,7 @@ function (_ref, ref) {
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'small' : _ref$as,
       muted = _ref.muted,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "as", "muted"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'form-text');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, props, {
     ref: ref,
@@ -38187,6 +38250,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "fluid", "as", "className"];
 var defaultProps = {
   fluid: false
 };
@@ -38197,7 +38261,7 @@ var Container = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
       className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "fluid", "as", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'container');
   var suffix = typeof fluid === 'string' ? "-" + fluid : '-fluid';
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
@@ -38232,6 +38296,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "fluid", "rounded", "roundedCircle", "thumbnail"];
 var propTypes = {
   /**
    * @default 'img'
@@ -38273,7 +38338,7 @@ var Image = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       rounded = _ref.rounded,
       roundedCircle = _ref.roundedCircle,
       thumbnail = _ref.thumbnail,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "fluid", "rounded", "roundedCircle", "thumbnail"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'img');
   var classes = (0, _classnames.default)(fluid && bsPrefix + "-fluid", rounded && "rounded", roundedCircle && "rounded-circle", thumbnail && bsPrefix + "-thumbnail");
   return /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({
@@ -38328,6 +38393,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Image = _interopRequireWildcard(require("./Image"));
 
+var _excluded = ["className"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -38338,7 +38405,7 @@ var defaultProps = {
 
 var FigureImage = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_Image.default, (0, _extends2.default)({
     ref: ref
   }, props, {
@@ -38388,6 +38455,7 @@ var _createWithBsPrefix = _interopRequireDefault(require("./createWithBsPrefix")
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "size", "hasValidation", "className", "as"];
 var InputGroupAppend = (0, _createWithBsPrefix.default)('input-group-append');
 var InputGroupPrepend = (0, _createWithBsPrefix.default)('input-group-prepend');
 var InputGroupText = (0, _createWithBsPrefix.default)('input-group-text', {
@@ -38421,7 +38489,7 @@ var InputGroup = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       className = _ref.className,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "size", "hasValidation", "className", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'input-group');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
     ref: ref
@@ -38459,6 +38527,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["as", "className", "fluid", "bsPrefix"];
 var defaultProps = {
   fluid: false
 };
@@ -38471,7 +38540,7 @@ var Jumbotron = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       className = _ref.className,
       fluid = _ref.fluid,
       bsPrefix = _ref.bsPrefix,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["as", "className", "fluid", "bsPrefix"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'jumbotron');
   var classes = (_classes = {}, _classes[bsPrefix] = true, _classes[bsPrefix + "-fluid"] = fluid, _classes);
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
@@ -38500,6 +38569,7 @@ var _uncontrollable = require("uncontrollable");
 var _ThemeProvider = require("./ThemeProvider");
 var _AbstractNav = _interopRequireDefault(require("./AbstractNav"));
 var _ListGroupItem = _interopRequireDefault(require("./ListGroupItem"));
+var _excluded = ["className", "bsPrefix", "variant", "horizontal", "as"];
 var defaultProps = {
   variant: undefined,
   horizontal: undefined
@@ -38507,7 +38577,7 @@ var defaultProps = {
 var ListGroup = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
   var _useUncontrolled = (0, _uncontrollable.useUncontrolled)(props, {
     activeKey: 'onSelect'
-  }), className = _useUncontrolled.className, initialBsPrefix = _useUncontrolled.bsPrefix, variant = _useUncontrolled.variant, horizontal = _useUncontrolled.horizontal, _useUncontrolled$as = _useUncontrolled.as, as = _useUncontrolled$as === void 0 ? 'div' : _useUncontrolled$as, controlledProps = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, ["className", "bsPrefix", "variant", "horizontal", "as"]);
+  }), className = _useUncontrolled.className, initialBsPrefix = _useUncontrolled.bsPrefix, variant = _useUncontrolled.variant, horizontal = _useUncontrolled.horizontal, _useUncontrolled$as = _useUncontrolled.as, as = _useUncontrolled$as === void 0 ? 'div' : _useUncontrolled$as, controlledProps = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, _excluded);
   var bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(initialBsPrefix, 'list-group');
   var horizontalVariant;
   if (horizontal) {
@@ -38558,6 +38628,8 @@ var _SelectableContext = _interopRequireWildcard(require("./SelectableContext"))
 
 var _TabContext = _interopRequireDefault(require("./TabContext"));
 
+var _excluded = ["as", "onSelect", "activeKey", "role", "onKeyDown"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -38572,7 +38644,7 @@ var AbstractNav = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       activeKey = _ref.activeKey,
       role = _ref.role,
       onKeyDown = _ref.onKeyDown,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["as", "onSelect", "activeKey", "role", "onKeyDown"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   // A ref and forceUpdate for refocus, b/c we only want to trigger when needed
   // and don't want to reset the set in the effect
   var forceUpdate = (0, _useForceUpdate.default)();
@@ -38700,6 +38772,8 @@ var _AbstractNavItem = _interopRequireDefault(require("./AbstractNavItem"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "active", "disabled", "className", "variant", "action", "as", "onClick"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -38719,7 +38793,7 @@ var ListGroupItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) 
       action = _ref.action,
       as = _ref.as,
       onClick = _ref.onClick,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "active", "disabled", "className", "variant", "action", "as", "onClick"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'list-group-item');
   var handleClick = (0, _react.useCallback)(function (event) {
     if (disabled) {
@@ -38764,6 +38838,7 @@ var _useEventCallback = _interopRequireDefault(require("@restart/hooks/useEventC
 var _warning = _interopRequireDefault(require("warning"));
 var _NavContext = _interopRequireDefault(require("./NavContext"));
 var _SelectableContext = _interopRequireWildcard(require("./SelectableContext"));
+var _excluded = ["active", "className", "eventKey", "onSelect", "onClick", "as"];
 function _getRequireWildcardCache(nodeInterop) {
   if (typeof WeakMap !== "function") return null;
   var cacheBabelInterop = new WeakMap();
@@ -38807,7 +38882,7 @@ var defaultProps = {
   disabled: false
 };
 var AbstractNavItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
-  var active = _ref.active, className = _ref.className, eventKey = _ref.eventKey, onSelect = _ref.onSelect, onClick = _ref.onClick, Component = _ref.as, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["active", "className", "eventKey", "onSelect", "onClick", "as"]);
+  var active = _ref.active, className = _ref.className, eventKey = _ref.eventKey, onSelect = _ref.onSelect, onClick = _ref.onClick, Component = _ref.as, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var navKey = (0, _SelectableContext.makeEventKey)(eventKey, props.href);
   var parentOnSelect = (0, _react.useContext)(_SelectableContext.default);
   var navContext = (0, _react.useContext)(_NavContext.default);
@@ -38869,6 +38944,7 @@ var _createWithBsPrefix = _interopRequireDefault(require("./createWithBsPrefix")
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "as"];
 var MediaBody = (0, _createWithBsPrefix.default)('media-body');
 
 var Media = /*#__PURE__*/_react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
@@ -38877,7 +38953,7 @@ function (_ref, ref) {
       className = _ref.className,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'media');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, props, {
     ref: ref,
@@ -38895,8 +38971,8 @@ module.exports = exports["default"];
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
 exports.default = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 var _classnames = _interopRequireDefault(require("classnames"));
 var _addEventListener = _interopRequireDefault(require("dom-helpers/addEventListener"));
 var _canUseDOM = _interopRequireDefault(require("dom-helpers/canUseDOM"));
@@ -38919,6 +38995,7 @@ var _ModalFooter = _interopRequireDefault(require("./ModalFooter"));
 var _ModalHeader = _interopRequireDefault(require("./ModalHeader"));
 var _ModalTitle = _interopRequireDefault(require("./ModalTitle"));
 var _ThemeProvider = require("./ThemeProvider");
+var _excluded = ["bsPrefix", "className", "style", "dialogClassName", "contentClassName", "children", "dialogAs", "aria-labelledby", "show", "animation", "backdrop", "keyboard", "onEscapeKeyDown", "onShow", "onHide", "container", "autoFocus", "enforceFocus", "restoreFocus", "restoreFocusOptions", "onEntered", "onExit", "onExiting", "onEnter", "onEntering", "onExited", "backdropClassName", "manager"];
 function _getRequireWildcardCache(nodeInterop) {
   if (typeof WeakMap !== "function") return null;
   var cacheBabelInterop = new WeakMap();
@@ -38972,17 +39049,21 @@ var defaultProps = {
 /*eslint-disable no-use-before-define, react/no-multi-comp*/
 function DialogTransition(props) {
   return (
-    /*#__PURE__*/_react.default.createElement(_Fade.default, props)
+    /*#__PURE__*/_react.default.createElement(_Fade.default, (0, _extends2.default)({}, props, {
+      timeout: null
+    }))
   );
 }
 function BackdropTransition(props) {
   return (
-    /*#__PURE__*/_react.default.createElement(_Fade.default, props)
+    /*#__PURE__*/_react.default.createElement(_Fade.default, (0, _extends2.default)({}, props, {
+      timeout: null
+    }))
   );
 }
 /*eslint-enable no-use-before-define*/
 var Modal = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
-  var bsPrefix = _ref.bsPrefix, className = _ref.className, style = _ref.style, dialogClassName = _ref.dialogClassName, contentClassName = _ref.contentClassName, children = _ref.children, Dialog = _ref.dialogAs, ariaLabelledby = _ref['aria-labelledby'], show = _ref.show, animation = _ref.animation, backdrop = _ref.backdrop, keyboard = _ref.keyboard, onEscapeKeyDown = _ref.onEscapeKeyDown, onShow = _ref.onShow, onHide = _ref.onHide, container = _ref.container, autoFocus = _ref.autoFocus, enforceFocus = _ref.enforceFocus, restoreFocus = _ref.restoreFocus, restoreFocusOptions = _ref.restoreFocusOptions, onEntered = _ref.onEntered, onExit = _ref.onExit, onExiting = _ref.onExiting, onEnter = _ref.onEnter, onEntering = _ref.onEntering, onExited = _ref.onExited, backdropClassName = _ref.backdropClassName, propsManager = _ref.manager, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "style", "dialogClassName", "contentClassName", "children", "dialogAs", "aria-labelledby", "show", "animation", "backdrop", "keyboard", "onEscapeKeyDown", "onShow", "onHide", "container", "autoFocus", "enforceFocus", "restoreFocus", "restoreFocusOptions", "onEntered", "onExit", "onExiting", "onEnter", "onEntering", "onExited", "backdropClassName", "manager"]);
+  var bsPrefix = _ref.bsPrefix, className = _ref.className, style = _ref.style, dialogClassName = _ref.dialogClassName, contentClassName = _ref.contentClassName, children = _ref.children, Dialog = _ref.dialogAs, ariaLabelledby = _ref['aria-labelledby'], show = _ref.show, animation = _ref.animation, backdrop = _ref.backdrop, keyboard = _ref.keyboard, onEscapeKeyDown = _ref.onEscapeKeyDown, onShow = _ref.onShow, onHide = _ref.onHide, container = _ref.container, autoFocus = _ref.autoFocus, enforceFocus = _ref.enforceFocus, restoreFocus = _ref.restoreFocus, restoreFocusOptions = _ref.restoreFocusOptions, onEntered = _ref.onEntered, onExit = _ref.onExit, onExiting = _ref.onExiting, onEnter = _ref.onEnter, onEntering = _ref.onEntering, onExited = _ref.onExited, backdropClassName = _ref.backdropClassName, propsManager = _ref.manager, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var _useState = (0, _react.useState)({}), modalStyle = _useState[0], setStyle = _useState[1];
   var _useState2 = (0, _react.useState)(false), animateStaticModal = _useState2[0], setAnimateStaticModal = _useState2[1];
   var waitingForMouseUpRef = (0, _react.useRef)(false);
@@ -40238,6 +40319,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "contentClassName", "centered", "size", "children", "scrollable"];
+
 var ModalDialog = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
@@ -40246,7 +40329,7 @@ var ModalDialog = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       size = _ref.size,
       children = _ref.children,
       scrollable = _ref.scrollable,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "contentClassName", "centered", "size", "children", "scrollable"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'modal');
   var dialogClass = bsPrefix + "-dialog";
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, {
@@ -40299,6 +40382,8 @@ var _CloseButton = _interopRequireDefault(require("./CloseButton"));
 
 var _ModalContext = _interopRequireDefault(require("./ModalContext"));
 
+var _excluded = ["bsPrefix", "closeLabel", "closeButton", "onHide", "className", "children"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -40315,7 +40400,7 @@ var ModalHeader = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       onHide = _ref.onHide,
       className = _ref.className,
       children = _ref.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "closeLabel", "closeButton", "onHide", "className", "children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'modal-header');
   var context = (0, _react.useContext)(_ModalContext.default);
   var handleClick = (0, _useEventCallback.default)(function () {
@@ -40389,6 +40474,8 @@ var _NavItem = _interopRequireDefault(require("./NavItem"));
 
 var _NavLink = _interopRequireDefault(require("./NavLink"));
 
+var _excluded = ["as", "bsPrefix", "variant", "fill", "justify", "navbar", "navbarScroll", "className", "children", "activeKey"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -40415,7 +40502,7 @@ var Nav = /*#__PURE__*/_react.default.forwardRef(function (uncontrolledProps, re
       className = _useUncontrolled.className,
       children = _useUncontrolled.children,
       activeKey = _useUncontrolled.activeKey,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, ["as", "bsPrefix", "variant", "fill", "justify", "navbar", "navbarScroll", "className", "children", "activeKey"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, _excluded);
 
   var bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(initialBsPrefix, 'nav');
   var navbarBsPrefix;
@@ -40464,6 +40551,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "children", "as"];
+
 var NavItem = /*#__PURE__*/_react.default.forwardRef( // Need to define the default "as" during prop destructuring to be compatible with styled-components github.com/react-bootstrap/react-bootstrap/issues/3595
 function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
@@ -40471,7 +40560,7 @@ function (_ref, ref) {
       children = _ref.children,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "children", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'nav-item');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, props, {
     ref: ref,
@@ -40505,6 +40594,7 @@ var _AbstractNavItem = _interopRequireDefault(require("./AbstractNavItem"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "disabled", "className", "href", "eventKey", "onSelect", "as"];
 var defaultProps = {
   disabled: false,
   as: _SafeAnchor.default
@@ -40518,7 +40608,7 @@ var NavLink = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       eventKey = _ref.eventKey,
       onSelect = _ref.onSelect,
       as = _ref.as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "disabled", "className", "href", "eventKey", "onSelect", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'nav-link');
   return /*#__PURE__*/_react.default.createElement(_AbstractNavItem.default, (0, _extends2.default)({}, props, {
     href: href,
@@ -40568,6 +40658,8 @@ var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
 
 var _SelectableContext = _interopRequireDefault(require("./SelectableContext"));
 
+var _excluded = ["bsPrefix", "expand", "variant", "bg", "fixed", "sticky", "className", "children", "as", "expanded", "onToggle", "onSelect", "collapseOnSelect"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -40599,7 +40691,7 @@ var Navbar = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
       _onToggle = _useUncontrolled.onToggle,
       onSelect = _useUncontrolled.onSelect,
       collapseOnSelect = _useUncontrolled.collapseOnSelect,
-      controlledProps = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, ["bsPrefix", "expand", "variant", "bg", "fixed", "sticky", "className", "children", "as", "expanded", "onToggle", "onSelect", "collapseOnSelect"]);
+      controlledProps = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, _excluded);
 
   var bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(initialBsPrefix, 'navbar');
   var handleCollapse = (0, _react.useCallback)(function () {
@@ -40667,11 +40759,13 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "as"];
+
 var NavbarBrand = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       as = _ref.as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'navbar-brand');
   var Component = as || (props.href ? 'a' : 'span');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({}, props, {
@@ -40704,10 +40798,12 @@ var _ThemeProvider = require("./ThemeProvider");
 
 var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
 
+var _excluded = ["children", "bsPrefix"];
+
 var NavbarCollapse = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var children = _ref.children,
       bsPrefix = _ref.bsPrefix,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["children", "bsPrefix"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'navbar-collapse');
   return /*#__PURE__*/_react.default.createElement(_NavbarContext.default.Consumer, null, function (context) {
     return /*#__PURE__*/_react.default.createElement(_Collapse.default, (0, _extends2.default)({
@@ -40745,6 +40841,8 @@ var _ThemeProvider = require("./ThemeProvider");
 
 var _NavbarContext = _interopRequireDefault(require("./NavbarContext"));
 
+var _excluded = ["bsPrefix", "className", "children", "label", "as", "onClick"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -40761,7 +40859,7 @@ var NavbarToggle = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'button' : _ref$as,
       onClick = _ref.onClick,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "children", "label", "as", "onClick"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'navbar-toggler');
 
   var _ref2 = (0, _react.useContext)(_NavbarContext.default) || {},
@@ -40814,6 +40912,8 @@ var _Dropdown = _interopRequireDefault(require("./Dropdown"));
 
 var _NavLink = _interopRequireDefault(require("./NavLink"));
 
+var _excluded = ["id", "title", "children", "bsPrefix", "className", "rootCloseEvent", "menuRole", "disabled", "active", "renderMenuOnMount"];
+
 var NavDropdown = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var id = _ref.id,
       title = _ref.title,
@@ -40825,7 +40925,7 @@ var NavDropdown = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       disabled = _ref.disabled,
       active = _ref.active,
       renderMenuOnMount = _ref.renderMenuOnMount,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["id", "title", "children", "bsPrefix", "className", "rootCloseEvent", "menuRole", "disabled", "active", "renderMenuOnMount"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   /* NavItem has no additional logic, it's purely presentational. Can set nav item class here to support "as" */
   var navItemPrefix = (0, _ThemeProvider.useBootstrapPrefix)(undefined, 'nav-item');
@@ -40879,6 +40979,9 @@ var _usePopperMarginModifiers = _interopRequireDefault(require("./usePopperMargi
 
 var _Fade = _interopRequireDefault(require("./Fade"));
 
+var _excluded = ["children", "transition", "popperConfig"],
+    _excluded2 = ["props", "arrowProps", "show", "update", "forceUpdate", "placement", "state"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -40908,7 +41011,7 @@ function Overlay(_ref) {
       transition = _ref.transition,
       _ref$popperConfig = _ref.popperConfig,
       popperConfig = _ref$popperConfig === void 0 ? {} : _ref$popperConfig,
-      outerProps = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["children", "transition", "popperConfig"]);
+      outerProps = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var popperRef = (0, _react.useRef)({});
 
   var _usePopperMarginModif = (0, _usePopperMarginModifiers.default)(),
@@ -40932,7 +41035,7 @@ function Overlay(_ref) {
         _ = _ref2.forceUpdate,
         placement = _ref2.placement,
         state = _ref2.state,
-        props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, ["props", "arrowProps", "show", "update", "forceUpdate", "placement", "state"]);
+        props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
     wrapRefs(overlayProps, arrowProps);
     var popper = Object.assign(popperRef.current, {
       state: state,
@@ -41254,6 +41357,7 @@ var _safeFindDOMNode = _interopRequireDefault(require("react-overlays/safeFindDO
 var _warning = _interopRequireDefault(require("warning"));
 var _uncontrollable = require("uncontrollable");
 var _Overlay = _interopRequireDefault(require("./Overlay"));
+var _excluded = ["trigger", "overlay", "children", "popperConfig", "show", "defaultShow", "onToggle", "delay", "placement", "flip"];
 function _getRequireWildcardCache(nodeInterop) {
   if (typeof WeakMap !== "function") return null;
   var cacheBabelInterop = new WeakMap();
@@ -41328,7 +41432,7 @@ var defaultProps = {
   trigger: ['hover', 'focus']
 };
 function OverlayTrigger(_ref) {
-  var trigger = _ref.trigger, overlay = _ref.overlay, children = _ref.children, _ref$popperConfig = _ref.popperConfig, popperConfig = _ref$popperConfig === void 0 ? {} : _ref$popperConfig, propsShow = _ref.show, _ref$defaultShow = _ref.defaultShow, defaultShow = _ref$defaultShow === void 0 ? false : _ref$defaultShow, onToggle = _ref.onToggle, propsDelay = _ref.delay, placement = _ref.placement, _ref$flip = _ref.flip, flip = _ref$flip === void 0 ? placement && placement.indexOf('auto') !== -1 : _ref$flip, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["trigger", "overlay", "children", "popperConfig", "show", "defaultShow", "onToggle", "delay", "placement", "flip"]);
+  var trigger = _ref.trigger, overlay = _ref.overlay, children = _ref.children, _ref$popperConfig = _ref.popperConfig, popperConfig = _ref$popperConfig === void 0 ? {} : _ref$popperConfig, propsShow = _ref.show, _ref$defaultShow = _ref.defaultShow, defaultShow = _ref$defaultShow === void 0 ? false : _ref$defaultShow, onToggle = _ref.onToggle, propsDelay = _ref.delay, placement = _ref.placement, _ref$flip = _ref.flip, flip = _ref$flip === void 0 ? placement && placement.indexOf('auto') !== -1 : _ref$flip, props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var triggerNodeRef = (0, _react.useRef)(null);
   var timeout = (0, _useTimeout.default)();
   var hoverStateRef = (0, _react.useRef)('');
@@ -41442,7 +41546,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _SafeAnchor = _interopRequireDefault(require("./SafeAnchor"));
 
-/* eslint-disable react/no-multi-comp */
+var _excluded = ["active", "disabled", "className", "style", "activeLabel", "children"],
+    _excluded2 = ["children"];
 var defaultProps = {
   active: false,
   disabled: false,
@@ -41456,7 +41561,7 @@ var PageItem = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       style = _ref.style,
       activeLabel = _ref.activeLabel,
       children = _ref.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["active", "disabled", "className", "style", "activeLabel", "children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var Component = active || disabled ? 'span' : _SafeAnchor.default;
   return /*#__PURE__*/_react.default.createElement("li", {
     ref: ref,
@@ -41485,7 +41590,7 @@ function createButton(name, defaultValue, label) {
 
   function Button(_ref2) {
     var children = _ref2.children,
-        props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, ["children"]);
+        props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
     return /*#__PURE__*/_react.default.createElement(PageItem, props, /*#__PURE__*/_react.default.createElement("span", {
       "aria-hidden": "true"
     }, children || defaultValue), /*#__PURE__*/_react.default.createElement("span", {
@@ -41527,6 +41632,8 @@ var _ThemeProvider = require("./ThemeProvider");
 
 var _PageItem = _interopRequireWildcard(require("./PageItem"));
 
+var _excluded = ["bsPrefix", "className", "children", "size"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -41544,7 +41651,7 @@ var Pagination = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       className = _ref.className,
       children = _ref.children,
       size = _ref.size,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "children", "size"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var decoratedBsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'pagination');
   return /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
     ref: ref
@@ -41586,6 +41693,7 @@ var _PopoverTitle = _interopRequireDefault(require("./PopoverTitle"));
 
 var _PopoverContent = _interopRequireDefault(require("./PopoverContent"));
 
+var _excluded = ["bsPrefix", "placement", "className", "style", "children", "content", "arrowProps", "popper", "show"];
 var defaultProps = {
   placement: 'right'
 };
@@ -41600,7 +41708,7 @@ var Popover = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       arrowProps = _ref.arrowProps,
       _ = _ref.popper,
       _1 = _ref.show,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "placement", "className", "style", "children", "content", "arrowProps", "popper", "show"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var decoratedBsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'popover');
 
   var _ref2 = (placement == null ? void 0 : placement.split('-')) || [],
@@ -41641,13 +41749,15 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["as", "bsPrefix", "className", "children"];
+
 var PopoverTitle = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
       bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       children = _ref.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["as", "bsPrefix", "className", "children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'popover-header');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
     ref: ref
@@ -41677,13 +41787,15 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["as", "bsPrefix", "className", "children"];
+
 var PopoverContent = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
       bsPrefix = _ref.bsPrefix,
       className = _ref.className,
       children = _ref.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["as", "bsPrefix", "className", "children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'popover-body');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
     ref: ref
@@ -41714,6 +41826,10 @@ var _react = _interopRequireWildcard(require("react"));
 var _ThemeProvider = require("./ThemeProvider");
 
 var _ElementChildren = require("./ElementChildren");
+
+var _excluded = ["min", "now", "max", "label", "srOnly", "striped", "animated", "className", "style", "variant", "bsPrefix"],
+    _excluded2 = ["isChild"],
+    _excluded3 = ["min", "now", "max", "label", "srOnly", "striped", "animated", "bsPrefix", "variant", "className", "children"];
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -41785,7 +41901,7 @@ function renderProgressBar(_ref, ref) {
       style = _ref.style,
       variant = _ref.variant,
       bsPrefix = _ref.bsPrefix,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["min", "now", "max", "label", "srOnly", "striped", "animated", "className", "style", "variant", "bsPrefix"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     ref: ref
   }, props, {
@@ -41804,7 +41920,7 @@ function renderProgressBar(_ref, ref) {
 
 var ProgressBar = /*#__PURE__*/_react.default.forwardRef(function (_ref2, ref) {
   var isChild = _ref2.isChild,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, ["isChild"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref2, _excluded2);
   props.bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(props.bsPrefix, 'progress');
 
   if (isChild) {
@@ -41822,7 +41938,7 @@ var ProgressBar = /*#__PURE__*/_react.default.forwardRef(function (_ref2, ref) {
       variant = props.variant,
       className = props.className,
       children = props.children,
-      wrapperProps = (0, _objectWithoutPropertiesLoose2.default)(props, ["min", "now", "max", "label", "srOnly", "striped", "animated", "bsPrefix", "variant", "className", "children"]);
+      wrapperProps = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded3);
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     ref: ref
   }, wrapperProps, {
@@ -41867,6 +41983,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "children", "aspectRatio"];
 var defaultProps = {
   aspectRatio: '1by1'
 };
@@ -41876,7 +41993,7 @@ var ResponsiveEmbed = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref
       className = _ref.className,
       children = _ref.children,
       aspectRatio = _ref.aspectRatio,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "children", "aspectRatio"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var decoratedBsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'embed-responsive');
 
   var child = _react.default.Children.only(children);
@@ -41912,6 +42029,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "noGutters", "as"];
 var DEVICE_SIZES = ['xl', 'lg', 'md', 'sm', 'xs'];
 var defaultProps = {
   noGutters: false
@@ -41923,7 +42041,7 @@ var Row = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       noGutters = _ref.noGutters,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "noGutters", "as"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var decoratedBsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'row');
   var sizePrefix = decoratedBsPrefix + "-cols";
   var classes = [];
@@ -41971,6 +42089,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "variant", "animation", "size", "children", "as", "className"];
+
 var Spinner = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       variant = _ref.variant,
@@ -41980,7 +42100,7 @@ var Spinner = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
       className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "variant", "animation", "size", "children", "as", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'spinner');
   var bsSpinnerPrefix = bsPrefix + "-" + animation;
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
@@ -42018,6 +42138,7 @@ var _Dropdown = _interopRequireDefault(require("./Dropdown"));
 
 var _DropdownMenu = require("./DropdownMenu");
 
+var _excluded = ["id", "bsPrefix", "size", "variant", "title", "type", "toggleLabel", "children", "onClick", "href", "target", "menuAlign", "menuRole", "renderMenuOnMount", "rootCloseEvent"];
 var propTypes = {
   /**
    * An html id attribute for the Toggle button, necessary for assistive technologies, such as screen readers.
@@ -42111,7 +42232,7 @@ var SplitButton = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       menuRole = _ref.menuRole,
       renderMenuOnMount = _ref.renderMenuOnMount,
       rootCloseEvent = _ref.rootCloseEvent,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["id", "bsPrefix", "size", "variant", "title", "type", "toggleLabel", "children", "onClick", "href", "target", "menuAlign", "menuRole", "renderMenuOnMount", "rootCloseEvent"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   return /*#__PURE__*/_react.default.createElement(_Dropdown.default, (0, _extends2.default)({
     ref: ref
   }, props, {
@@ -42271,12 +42392,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "as", "className"];
+
 var TabContent = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       _ref$as = _ref.as,
       Component = _ref$as === void 0 ? 'div' : _ref$as,
       className = _ref.className,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "as", "className"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var decoratedBsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'tab-content');
   return /*#__PURE__*/_react.default.createElement(Component, (0, _extends2.default)({
     ref: ref
@@ -42312,6 +42435,9 @@ var _SelectableContext = _interopRequireWildcard(require("./SelectableContext"))
 
 var _Fade = _interopRequireDefault(require("./Fade"));
 
+var _excluded = ["activeKey", "getControlledId", "getControllerId"],
+    _excluded2 = ["bsPrefix", "className", "active", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "mountOnEnter", "unmountOnExit", "transition", "as", "eventKey"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -42322,7 +42448,7 @@ function useTabContext(props) {
   var activeKey = context.activeKey,
       getControlledId = context.getControlledId,
       getControllerId = context.getControllerId,
-      rest = (0, _objectWithoutPropertiesLoose2.default)(context, ["activeKey", "getControlledId", "getControllerId"]);
+      rest = (0, _objectWithoutPropertiesLoose2.default)(context, _excluded);
   var shouldTransition = props.transition !== false && rest.transition !== false;
   var key = (0, _SelectableContext.makeEventKey)(props.eventKey);
   return (0, _extends2.default)({}, props, {
@@ -42352,7 +42478,7 @@ var TabPane = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
       _useTabContext$as = _useTabContext.as,
       Component = _useTabContext$as === void 0 ? 'div' : _useTabContext$as,
       _ = _useTabContext.eventKey,
-      rest = (0, _objectWithoutPropertiesLoose2.default)(_useTabContext, ["bsPrefix", "className", "active", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "mountOnEnter", "unmountOnExit", "transition", "as", "eventKey"]);
+      rest = (0, _objectWithoutPropertiesLoose2.default)(_useTabContext, _excluded2);
 
   var prefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'tab-pane');
   if (!active && !Transition && unmountOnExit) return null;
@@ -42408,6 +42534,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "className", "striped", "bordered", "borderless", "hover", "size", "variant", "responsive"];
+
 var Table = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
   var bsPrefix = _ref.bsPrefix,
       className = _ref.className,
@@ -42418,7 +42546,7 @@ var Table = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       size = _ref.size,
       variant = _ref.variant,
       responsive = _ref.responsive,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "striped", "bordered", "borderless", "hover", "size", "variant", "responsive"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var decoratedBsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'table');
   var classes = (0, _classnames.default)(className, decoratedBsPrefix, variant && decoratedBsPrefix + "-" + variant, size && decoratedBsPrefix + "-" + size, striped && decoratedBsPrefix + "-striped", bordered && decoratedBsPrefix + "-bordered", borderless && decoratedBsPrefix + "-borderless", hover && decoratedBsPrefix + "-hover");
 
@@ -42477,6 +42605,7 @@ var _TabPane = _interopRequireDefault(require("./TabPane"));
 
 var _ElementChildren = require("./ElementChildren");
 
+var _excluded = ["id", "onSelect", "transition", "mountOnEnter", "unmountOnExit", "children", "activeKey"];
 var defaultProps = {
   variant: 'tabs',
   mountOnEnter: false,
@@ -42526,7 +42655,7 @@ var Tabs = function Tabs(props) {
       children = _useUncontrolled.children,
       _useUncontrolled$acti = _useUncontrolled.activeKey,
       activeKey = _useUncontrolled$acti === void 0 ? getDefaultActiveKey(children) : _useUncontrolled$acti,
-      controlledProps = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, ["id", "onSelect", "transition", "mountOnEnter", "unmountOnExit", "children", "activeKey"]);
+      controlledProps = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, _excluded);
 
   return /*#__PURE__*/_react.default.createElement(_TabContainer.default, {
     id: id,
@@ -42580,6 +42709,8 @@ var _ThemeProvider = require("./ThemeProvider");
 
 var _ToastContext = _interopRequireDefault(require("./ToastContext"));
 
+var _excluded = ["bsPrefix", "className", "children", "transition", "show", "animation", "delay", "autohide", "onClose"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -42599,7 +42730,7 @@ var Toast = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       _ref$autohide = _ref.autohide,
       autohide = _ref$autohide === void 0 ? false : _ref$autohide,
       onClose = _ref.onClose,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "className", "children", "transition", "show", "animation", "delay", "autohide", "onClose"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'toast'); // We use refs for these, because we don't want to restart the autohide
   // timer in case these values change.
 
@@ -42676,6 +42807,8 @@ var _CloseButton = _interopRequireDefault(require("./CloseButton"));
 
 var _ToastContext = _interopRequireDefault(require("./ToastContext"));
 
+var _excluded = ["bsPrefix", "closeLabel", "closeButton", "className", "children"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -42691,7 +42824,7 @@ var ToastHeader = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       closeButton = _ref.closeButton,
       className = _ref.className,
       children = _ref.children,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "closeLabel", "closeButton", "className", "children"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'toast-header');
   var context = (0, _react.useContext)(_ToastContext.default);
   var handleClick = (0, _useEventCallback.default)(function (e) {
@@ -42766,6 +42899,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _Button = _interopRequireDefault(require("./Button"));
 
+var _excluded = ["children", "name", "className", "checked", "type", "onChange", "value", "disabled", "inputRef"];
+
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -42784,7 +42919,7 @@ var ToggleButton = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       value = _ref.value,
       disabled = _ref.disabled,
       inputRef = _ref.inputRef,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["children", "name", "className", "checked", "type", "onChange", "value", "disabled", "inputRef"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
 
   var _useState = (0, _react.useState)(false),
       focused = _useState[0],
@@ -42834,6 +42969,7 @@ var _createChainedFunction = _interopRequireDefault(require("./createChainedFunc
 var _ElementChildren = require("./ElementChildren");
 var _ButtonGroup = _interopRequireDefault(require("./ButtonGroup"));
 var _ToggleButton = _interopRequireDefault(require("./ToggleButton"));
+var _excluded = ["children", "type", "name", "value", "onChange"];
 var defaultProps = {
   type: 'radio',
   vertical: false
@@ -42841,7 +42977,7 @@ var defaultProps = {
 var ToggleButtonGroup = /*#__PURE__*/_react.default.forwardRef(function (props, ref) {
   var _useUncontrolled = (0, _uncontrollable.useUncontrolled)(props, {
     value: 'onChange'
-  }), children = _useUncontrolled.children, type = _useUncontrolled.type, name = _useUncontrolled.name, value = _useUncontrolled.value, onChange = _useUncontrolled.onChange, controlledProps = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, ["children", "type", "name", "value", "onChange"]);
+  }), children = _useUncontrolled.children, type = _useUncontrolled.type, name = _useUncontrolled.name, value = _useUncontrolled.value, onChange = _useUncontrolled.onChange, controlledProps = (0, _objectWithoutPropertiesLoose2.default)(_useUncontrolled, _excluded);
   var getValues = function getValues() {
     return value == null ? [] : [].concat(value);
   };
@@ -42911,6 +43047,7 @@ var _isRequiredForA11y = _interopRequireDefault(require("prop-types-extra/lib/is
 
 var _ThemeProvider = require("./ThemeProvider");
 
+var _excluded = ["bsPrefix", "placement", "className", "style", "children", "arrowProps", "popper", "show"];
 var defaultProps = {
   placement: 'right'
 };
@@ -42924,7 +43061,7 @@ var Tooltip = /*#__PURE__*/_react.default.forwardRef(function (_ref, ref) {
       arrowProps = _ref.arrowProps,
       _ = _ref.popper,
       _2 = _ref.show,
-      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, ["bsPrefix", "placement", "className", "style", "children", "arrowProps", "popper", "show"]);
+      props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   bsPrefix = (0, _ThemeProvider.useBootstrapPrefix)(bsPrefix, 'tooltip');
 
   var _ref2 = (placement == null ? void 0 : placement.split('-')) || [],
