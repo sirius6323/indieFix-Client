@@ -26458,7 +26458,9 @@ try {
             columnNumber: 9
           }
         })) : movies.map(movie => /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
+          sm: 6,
           md: 4,
+          lg: 3,
           key: movie._id,
           __self: this,
           __source: {
