@@ -43177,6 +43177,7 @@ try {
             columnNumber: 5
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card.Img, {
+          className: "movie-poster",
           variant: "top",
           src: _urlImagesParaNormanJpgDefault.default,
           __self: this,
