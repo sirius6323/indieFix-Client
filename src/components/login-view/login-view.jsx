@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Container, Form, Button } from 'react-bootstrap';
+import axios from 'axios';
 import './login-view.scss';
 
 export function LoginView(props) {
@@ -10,9 +11,19 @@ export function LoginView(props) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(username, password);
-		/* Sends a request to the server for authentication 
-			 the call props.onLoggedIn(username) */
-		props.onLoggedIn(username);
+		/* Sends a request to the server for authentication */
+		axios
+			.post('https://indiefix.herokuapp.com/login', {
+				Username: username,
+				Password: password,
+			})
+			.then((response) => {
+				const data = response.data;
+				props.onLoggedIn(data);
+			})
+			.catch((e) => {
+				console.log('User does not exist');
+			});
 	};
 
 	return (
@@ -27,8 +38,9 @@ export function LoginView(props) {
 						<Form.Control
 							size='md'
 							type='text'
-							onChange={(e) => setUsername(e.target.value)}
 							placeholder='Enter Username'
+							value={username}
+							onChange={(e) => setUsername(e.target.value)}
 						/>
 						<Form.Text className='text-muted'>
 							We'll never share your user account info with anyone else.
@@ -40,8 +52,9 @@ export function LoginView(props) {
 						<Form.Control
 							size='md'
 							type='password'
-							onChange={(e) => setPassword(e.target.value)}
 							placeholder='Enter Password'
+							value={password}
+							onChange={(e) => setPassword(e.target.value)}
 						/>
 					</Form.Group>
 					<div className='d-grid gap-2 custom-button'>
