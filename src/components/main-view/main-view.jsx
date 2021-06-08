@@ -22,16 +22,13 @@ class MainView extends React.Component {
 
 	// Fetch Movies from server
 	componentDidMount() {
-		axios
-			.get('https://indiefix.herokuapp.com/movies')
-			.then((response) => {
-				this.setState({
-					movies: response.data,
-				});
-			})
-			.catch((error) => {
-				console.log(error);
+		let accessToken = localStorage.getItem('token');
+		if (accessToken !== null) {
+			this.setState({
+				user: localStorage.getItem('user'),
 			});
+			this.getMovies(accessToken);
+		}
 	}
 
 	setSelectedMovie(movie) {
@@ -47,6 +44,14 @@ class MainView extends React.Component {
 		localStorage.setItem('token', authData.token);
 		localStorage.setItem('user', authData.user.Username);
 		this.getMovies(authData.token);
+	}
+
+	onLoggedOut() {
+		localStorage.removeItem('token');
+		localStorage.removeItem('user');
+		this.setState({
+			user: null,
+		});
 	}
 
 	getMovies(token) {
