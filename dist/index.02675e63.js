@@ -26327,9 +26327,27 @@ try {
         selectedMovie: movie
       });
     }
-    onLoggedIn(user) {
+    onLoggedIn(authData) {
+      console.log(authData);
       this.setState({
-        user
+        user: authData.user.Username
+      });
+      localStorage.setItem('token', authData.token);
+      localStorage.setItem('user', authData.user.Username);
+      this.getMovies(authData.token);
+    }
+    getMovies(token) {
+      _axiosDefault.default.get('https://indiefix.herokuapp.com/movies', {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }).then(response => {
+        // Assigns the result to the state
+        this.setState({
+          movies: response.data
+        });
+      }).catch(function (error) {
+        console.log(error);
       });
     }
     onRegister(register) {
@@ -26357,7 +26375,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 63,
+            lineNumber: 86,
             columnNumber: 5
           }
         })
@@ -26369,7 +26387,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 71,
+            lineNumber: 94,
             columnNumber: 5
           }
         })
@@ -26380,7 +26398,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 77,
+            lineNumber: 100,
             columnNumber: 35
           }
         })
@@ -26391,7 +26409,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 80,
+            lineNumber: 103,
             columnNumber: 4
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Navbar, {
@@ -26403,7 +26421,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81,
+            lineNumber: 104,
             columnNumber: 5
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Navbar.Brand, {
@@ -26412,7 +26430,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 88,
+            lineNumber: 111,
             columnNumber: 6
           }
         }, "indieFix"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Navbar.Toggle, {
@@ -26420,7 +26438,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 91,
+            lineNumber: 114,
             columnNumber: 6
           }
         }), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Navbar.Collapse, {
@@ -26429,7 +26447,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92,
+            lineNumber: 115,
             columnNumber: 6
           }
         })), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
@@ -26437,7 +26455,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 97,
+            lineNumber: 120,
             columnNumber: 5
           }
         }, selectedMovie ? /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
@@ -26445,7 +26463,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99,
+            lineNumber: 122,
             columnNumber: 7
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_movieViewMovieView.MovieView, {
@@ -26456,7 +26474,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 100,
+            lineNumber: 123,
             columnNumber: 8
           }
         })) : movies.map(movie => /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
@@ -26467,7 +26485,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 109,
+            lineNumber: 132,
             columnNumber: 8
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_movieCardMovieCard.MovieCard, {
@@ -26478,7 +26496,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 111,
+            lineNumber: 134,
             columnNumber: 10
           }
         })))))
@@ -43363,6 +43381,8 @@ try {
   var _propTypes = require('prop-types');
   var _propTypesDefault = _parcelHelpers.interopDefault(_propTypes);
   var _reactBootstrap = require('react-bootstrap');
+  var _axios = require('axios');
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
   require('./login-view.scss');
   var _jsxFileName = "C:\\Users\\galah.000\\Documents\\myProjects\\indieFix-Client\\src\\components\\login-view\\login-view.jsx", _s = $RefreshSig$();
   function LoginView(props) {
@@ -43372,16 +43392,23 @@ try {
     const handleSubmit = e => {
       e.preventDefault();
       console.log(username, password);
-      /*Sends a request to the server for authentication
-      the call props.onLoggedIn(username)*/
-      props.onLoggedIn(username);
+      /*Sends a request to the server for authentication*/
+      _axiosDefault.default.post('https://indiefix.herokuapp.com/login', {
+        Username: username,
+        Password: password
+      }).then(response => {
+        const data = response.data;
+        props.onLoggedIn(data);
+      }).catch(e => {
+        console.log('User does not exist');
+      });
     };
     return (
       /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Container, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19,
+          lineNumber: 30,
           columnNumber: 3
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -43389,7 +43416,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20,
+          lineNumber: 31,
           columnNumber: 4
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form, {
@@ -43397,7 +43424,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21,
+          lineNumber: 32,
           columnNumber: 5
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
@@ -43405,7 +43432,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22,
+          lineNumber: 33,
           columnNumber: 6
         }
       }, "Login to indieFix"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Group, {
@@ -43414,25 +43441,26 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25,
+          lineNumber: 36,
           columnNumber: 6
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Label, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26,
+          lineNumber: 37,
           columnNumber: 7
         }
       }, "Username"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Control, {
         size: "md",
         type: "text",
-        onChange: e => setUsername(e.target.value),
         placeholder: "Enter Username",
+        value: username,
+        onChange: e => setUsername(e.target.value),
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27,
+          lineNumber: 38,
           columnNumber: 7
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Text, {
@@ -43440,7 +43468,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33,
+          lineNumber: 45,
           columnNumber: 7
         }
       }, "We'll never share your user account info with anyone else.")), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Group, {
@@ -43449,25 +43477,26 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38,
+          lineNumber: 50,
           columnNumber: 6
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Label, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39,
+          lineNumber: 51,
           columnNumber: 7
         }
       }, "Password"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Control, {
         size: "md",
         type: "password",
-        onChange: e => setPassword(e.target.value),
         placeholder: "Enter Password",
+        value: password,
+        onChange: e => setPassword(e.target.value),
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40,
+          lineNumber: 52,
           columnNumber: 7
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -43475,7 +43504,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47,
+          lineNumber: 60,
           columnNumber: 6
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Button, {
@@ -43487,7 +43516,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48,
+          lineNumber: 61,
           columnNumber: 7
         }
       }, "Submit"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Button, {
@@ -43499,7 +43528,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57,
+          lineNumber: 70,
           columnNumber: 7
         }
       }, "Register")))))
@@ -43522,7 +43551,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/lib/esmodule-helpers.js":"7kyIT","../../../../../../AppData/Roaming/npm/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7belF","./login-view.scss":"3ueKO","react-bootstrap":"4n7hB"}],"3ueKO":[function() {},{}],"7gvH2":[function(require,module,exports) {
+},{"react":"3b2NM","prop-types":"4dfy5","@parcel/transformer-js/lib/esmodule-helpers.js":"7kyIT","../../../../../../AppData/Roaming/npm/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7belF","./login-view.scss":"3ueKO","react-bootstrap":"4n7hB","axios":"7rA65"}],"3ueKO":[function() {},{}],"7gvH2":[function(require,module,exports) {
 var helpers = require("../../../../../../AppData/Roaming/npm/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
