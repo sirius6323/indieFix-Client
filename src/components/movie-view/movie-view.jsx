@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 // Component to display single movie view
 export class MovieView extends React.Component {
 	render() {
-		const { movie, onBackClick } = this.props;
+		const { movie } = this.props;
 
 		return (
 			<div className='movie-view'>
@@ -34,35 +34,40 @@ export class MovieView extends React.Component {
 						</Card.Text>
 						<Row>
 							<Col>
-								<Button
-									className='mb-2'
-									size='sm'
-									block
-									variant='danger'
-									// onClick={() => {
-									// 	onDirectorClick(director);
-									// }}
-								>
-									Director
-								</Button>
+								<Link to={`/directors/${movie.Director.Name}`}>
+									<Button
+										className='mb-2'
+										size='sm'
+										block
+										variant='danger link'
+									>
+										Director
+									</Button>
+								</Link>
 							</Col>
 							<Col>
-								<Button className='mb-2' size='sm' block variant='danger'>
-									Genre
-								</Button>
+								<Link to={`/genres/${movie.Genre.Name}`}>
+									<Button
+										className='mb-2'
+										size='sm'
+										block
+										variant='danger link'
+									>
+										Genre
+									</Button>
+								</Link>
 							</Col>
 							<Col>
-								<Button
-									size='sm'
-									variant='danger'
-									className='mb-2'
-									block
-									onClick={() => {
-										onBackClick(null);
-									}}
-								>
-									Movies
-								</Button>
+								<Link to={`/movies/${movies}`}>
+									<Button
+										size='sm'
+										variant='danger link'
+										className='mb-2'
+										block
+									>
+										Movies
+									</Button>
+								</Link>
 							</Col>
 						</Row>
 					</Card.Body>
