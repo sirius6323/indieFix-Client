@@ -10,7 +10,6 @@ export function LoginView(props) {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(username, password);
 		/* Sends a request to the server for authentication */
 		axios
 			.post('https://indiefix.herokuapp.com/login', {
