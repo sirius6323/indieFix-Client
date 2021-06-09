@@ -4,6 +4,8 @@ import { Card, Button, Row, Col } from 'react-bootstrap';
 import './movie-view.scss';
 import ParaNorman from 'url:../images/paraNorman.jpg';
 
+import { Link } from 'react-router-dom';
+
 // Component to display single movie view
 export class MovieView extends React.Component {
 	render() {
