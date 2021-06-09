@@ -4,6 +4,8 @@ import { Button, Card, CardDeck } from 'react-bootstrap';
 import './movie-card.scss';
 import ParaNorman from 'url:../images/paraNorman.jpg';
 
+import { Link } from 'react-router-dom';
+
 export class MovieCard extends React.Component {
 	render() {
 		const { movie, onMovieClick } = this.props;
