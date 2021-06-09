@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { Row, Col, Navbar } from 'react-bootstrap';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import { Row, Col, Navbar } from 'react-bootstrap';
 import { LoginView } from '../login-view/login-view';
 import { RegistrationView } from '../registration-view/registration-view';
 import { MovieCard } from '../movie-card/movie-card';
