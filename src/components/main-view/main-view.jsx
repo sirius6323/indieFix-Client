@@ -88,7 +88,7 @@ class MainView extends React.Component {
 						path='/'
 						render={() => {
 							return movies.map((m) => (
-								<Col md={3} key={m._id}>
+								<Col sm={6} md={4} lg={3} key={m._id}>
 									<MovieCard movie={m} />
 								</Col>
 							));
