@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 export class MovieCard extends React.Component {
 	render() {
-		const { movie, onMovieClick } = this.props;
+		const { movie } = this.props;
 
 		return (
 			<CardDeck className='py-5'>
@@ -20,14 +20,11 @@ export class MovieCard extends React.Component {
 					<Card.Body>
 						<Card.Title>{movie.Title}</Card.Title>
 						<Card.Text>{movie.Description.slice(0, 70)} ...'</Card.Text>
-						<Button
-							onClick={() => onMovieClick(movie)}
-							variant='danger link'
-							size='sm'
-							block
-						>
-							Movie Info
-						</Button>
+						<Link to={`/movies/${movie._id}`}>
+							<Button variant='danger link' size='sm' block>
+								Movie Info
+							</Button>
+						</Link>
 					</Card.Body>
 				</Card>
 			</CardDeck>
@@ -51,5 +48,4 @@ MovieCard.propTypes = {
 		ImageURL: PropTypes.string.isRequired,
 		Featured: PropTypes.bool.isRequired,
 	}).isRequired,
-	onMovieClick: PropTypes.func.isRequired,
 };
