@@ -82,6 +82,22 @@ class MainView extends React.Component {
 
 		return (
 			<Router>
+				<Navbar
+					bg='info'
+					expand='lg'
+					sticky='top'
+					variant='dark'
+					className='navbar mb-3'
+				>
+					<Navbar.Brand href='http://localhost:1234' className='navbar-brand'>
+						indieFix
+					</Navbar.Brand>
+					<Navbar.Toggle aria-controls='basic-navbar-nav' />
+					<Navbar.Collapse
+						className='justify-content-end'
+						id='basic-navbar-nav'
+					></Navbar.Collapse>
+				</Navbar>
 				<Row className='main view justify-content-md-center'>
 					<Route
 						exact
