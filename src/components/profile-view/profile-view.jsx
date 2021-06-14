@@ -7,7 +7,7 @@ import './profile-view.scss';
 
 export class ProfileView extends React.Component {
 	render() {
-		let { user, token, history, UserData, onNewUser, onSignOut } = this.props;
+		let { user, token, history, userData, onNewUser, onSignOut } = this.props;
 
 		function updateInfo(token) {
 			const userFirst = document.getElementById('firstName');
@@ -20,16 +20,18 @@ export class ProfileView extends React.Component {
 
 			if (userInput.value.length > 12) {
 				const userErr = document.getElementById('user');
-				return (userErr.innerText = 'Username can only 12 characters');
+				return (userErr.innerText = 'Username can only be 12 characters');
 			}
 
-			const nameChoice = userInput.value || UserData.Username;
+			const userNameChoice = userInput.value || UserData.Username;
 			let passChoice = null;
 			if (passInput.value == '') {
 				passChoice = '';
 			} else {
 				passChoice = passInput.value;
 			}
+			const firstNameChoice = userFirst.value || UserData.FirstName;
+			const lastNameChoice = userLast.value || UserData.LastName;
 			const emailChoice = emailInput.value || UserData.Email;
 			const birthdayChoice = birthdayInput.value || UserData.Birthday;
 
@@ -38,7 +40,9 @@ export class ProfileView extends React.Component {
 					.put(
 						`https://indiefix.herokuapp.com/users/${user}`,
 						{
-							Username: nameChoice,
+							FirstName: firstNameChoice,
+							LastName: lastNameChoice,
+							Username: userNameChoice,
 							Password: passChoice,
 							Email: emailChoice,
 							Birthday: birthdayChoice,
@@ -97,33 +101,117 @@ export class ProfileView extends React.Component {
 			return formatDate.slice(0, 10);
 		}
 
-		if (userData.Username === 'ninja06') {
-			return (
-				<>
-					<div className='ninProfile'>
-						<h1 className='title my-4'>{`${userData.Username}`},</h1>
-						<h2 className='title-2 my-4'>Your Current Information</h2>
-						<div className='align-text-left'>
-							<div className='my-2'>
-								<strong>Username:</strong>
-								{`${userData.Username}`}
-							</div>
-							<div className='my-2'>
-								<strong>Email:</strong>
-								{`${userData.Email}`}
-							</div>
-							<div className='my-2'>
-								<strong>Birthday:</strong>
-								{`${Date()}`}
-							</div>
+		return (
+			<Container>
+				<div className='d flex align-items-center justify-content-center'>
+					<Form className='custom-form'>
+						<h3 className='d-flex mb-3 text-align-center justify-content-center font-weight-bold register'>
+							Update Your Account
+						</h3>
+						<Row>
+							<Col>
+								<Form.Group className='mb-3'>
+									<Form.Label htmlFor='FirstName'>First Name</Form.Label>
+									<Form.Control
+										type='text'
+										name='FirstName'
+										placeholder='First Name'
+									/>
+								</Form.Group>
+							</Col>
+							<Col>
+								<Form.Group className='mb-3'>
+									<Form.Label htmlFor='LastName'>Last Name</Form.Label>
+									<Form.Control
+										type='text'
+										name='LastName'
+										placeholder='Last Name'
+									/>
+								</Form.Group>
+							</Col>
+						</Row>
+						<Row>
+							<Col>
+								<Form.Group className='mb-3'>
+									<Form.Label htmlFor='Birthday'>Birthday</Form.Label>
+									<Form.Control
+										type='text'
+										name='Birthday'
+										placeholder='MM/DD/YY'
+									/>
+								</Form.Group>
+							</Col>
+							<Col>
+								<Form.Group className='mb-3'>
+									<Form.Label htmlFor='Username'>Username</Form.Label>
+									<Form.Control
+										type='text'
+										name='Username'
+										placeholder='Username'
+									/>
+								</Form.Group>
+							</Col>
+						</Row>
+						<Row>
+							<Col>
+								<Form.Group className='mb-3'>
+									<Form.Label htmlFor='Password'>Password</Form.Label>
+									<Form.Control
+										type='text'
+										name='Password'
+										placeholder='Password'
+									/>
+									<Form.Text className='text-muted'>
+										Your password requires a minimum of 8 characters.
+									</Form.Text>
+								</Form.Group>
+							</Col>
+							<Col>
+								<Form.Group className='mb-3'>
+									<Form.Label htmlFor='Email'>Email</Form.Label>
+									<Form.Control type='text' name='Email' placeholder='Email' />
+									<Form.Text className='text-muted'>
+										Your email must be a valid email address.
+									</Form.Text>
+								</Form.Group>
+							</Col>
+						</Row>
+						<div className='d-grid gap-2 custom-button'>
+							<Button
+								className='mb-3'
+								variant='info primary'
+								type='submit'
+								size='sm'
+								block
+								onClick={() => {
+									updateInfo(token);
+								}}
+							>
+								Update
+							</Button>
+							<Link to='/'>
+								<Button variant='danger' type='secondary link' size='md' block>
+									Back To Movies
+								</Button>
+							</Link>
+							<Button
+								className='mt-3'
+								variant='info'
+								type='button'
+								size='sm'
+								block
+								onClick={() => {
+									deleteAccount(token);
+									onSignOut(null);
+									history.push('/');
+								}}
+							>
+								Delete Account
+							</Button>
 						</div>
-						<h2 className='title-2 my-4'>Update Information</h2>
-						<div>The ninja06 account info cannot be updated!</div>
-					</div>
-				</>
-			);
-		}
-
-		return <></>;
+					</Form>
+				</div>
+			</Container>
+		);
 	}
 }
