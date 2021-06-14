@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Container, Form, Button, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './registration-view.scss';
 
 export function RegistrationView(props) {
@@ -13,8 +15,26 @@ export function RegistrationView(props) {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(firstName, lastName, birthday, username, email);
-		props.onRegister(username);
+
+		axios
+			.post('https://indiefix.herokuapp.com/users', {
+				FirstName: firstName,
+				LastName: lastName,
+				Birthday: birthday,
+				Username: username,
+				Password: password,
+				Email: email,
+			})
+			.then((response) => {
+				const data = response.data;
+				console.log(data);
+				props.onRegister(data);
+				// _self argument is necessary so that the page will open in the current tab
+				window.open('/', '_self');
+			})
+			.catch((e) => {
+				console.log('Error registering the user');
+			});
 	};
 
 	return (
@@ -26,10 +46,11 @@ export function RegistrationView(props) {
 					</h3>
 					<Row>
 						<Col>
-							<Form.Group controlId='registerFirstName' className='mb-3'>
-								<Form.Label>First Name</Form.Label>
+							<Form.Group className='mb-3'>
+								<Form.Label htmlFor='FirstName'>First Name</Form.Label>
 								<Form.Control
 									type='text'
+									name='FirstName'
 									value={firstName}
 									placeholder='First Name'
 									onChange={(e) => setFirstName(e.target.value)}
@@ -37,10 +58,11 @@ export function RegistrationView(props) {
 							</Form.Group>
 						</Col>
 						<Col>
-							<Form.Group controlId='registerLastName' className='mb-3'>
-								<Form.Label>Last Name</Form.Label>
+							<Form.Group className='mb-3'>
+								<Form.Label htmlFor='LastName'>Last Name</Form.Label>
 								<Form.Control
 									type='text'
+									name='LastName'
 									value={lastName}
 									placeholder='Last Name'
 									onChange={(e) => setLastName(e.target.value)}
@@ -50,10 +72,11 @@ export function RegistrationView(props) {
 					</Row>
 					<Row>
 						<Col>
-							<Form.Group controlId='registerBirthday' className='mb-3'>
-								<Form.Label>Birthday</Form.Label>
+							<Form.Group className='mb-3'>
+								<Form.Label htmlFor='Birthday'>Birthday</Form.Label>
 								<Form.Control
 									type='text'
+									name='Birthday'
 									value={birthday}
 									placeholder='MM/DD/YY'
 									onChange={(e) => setBirthday(e.target.value)}
@@ -61,10 +84,11 @@ export function RegistrationView(props) {
 							</Form.Group>
 						</Col>
 						<Col>
-							<Form.Group controlId='registerUserName' className='mb-3'>
-								<Form.Label>Username</Form.Label>
+							<Form.Group className='mb-3'>
+								<Form.Label htmlFor='Username'>Username</Form.Label>
 								<Form.Control
 									type='text'
+									name='Username'
 									value={username}
 									placeholder='Username'
 									onChange={(e) => setUsername(e.target.value)}
@@ -74,10 +98,11 @@ export function RegistrationView(props) {
 					</Row>
 					<Row>
 						<Col>
-							<Form.Group controlId='registerPassword' className='mb-3'>
-								<Form.Label>Password</Form.Label>
+							<Form.Group className='mb-3'>
+								<Form.Label htmlFor='Password'>Password</Form.Label>
 								<Form.Control
 									type='text'
+									name='Password'
 									value={password}
 									placeholder='Password'
 									onChange={(e) => setPassword(e.target.value)}
@@ -88,10 +113,11 @@ export function RegistrationView(props) {
 							</Form.Group>
 						</Col>
 						<Col>
-							<Form.Group controlId='registerEmail' className='mb-3'>
-								<Form.Label>Email</Form.Label>
+							<Form.Group className='mb-3'>
+								<Form.Label htmlFor='Email'>Email</Form.Label>
 								<Form.Control
 									type='text'
+									name='Email'
 									value={email}
 									placeholder='Email'
 									onChange={(e) => setEmail(e.target.value)}
@@ -104,6 +130,7 @@ export function RegistrationView(props) {
 					</Row>
 					<div className='d-grid gap-2 custom-button'>
 						<Button
+							className='mb-3'
 							variant='info primary'
 							type='submit'
 							size='sm'
@@ -112,24 +139,14 @@ export function RegistrationView(props) {
 						>
 							Submit
 						</Button>
-						<Button
-							variant='danger primary'
-							type='secondary'
-							size='sm'
-							block
-							onClick={() => {
-								onBackClick(null);
-							}}
-						>
-							Back
-						</Button>
+						<Link to='/'>
+							<Button variant='danger' type='secondary link' size='md' block>
+								Back To Log In
+							</Button>
+						</Link>
 					</div>
 				</Form>
 			</div>
 		</Container>
 	);
 }
-
-RegistrationView.propTypes = {
-	onRegister: PropTypes.func.isRequired,
-};
