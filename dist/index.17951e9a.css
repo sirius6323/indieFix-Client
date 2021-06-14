@@ -9,6 +9,10 @@
 .movie-poster {
   width: 250px;
 }
+
+.link-style {
+  text-decoration: none;
+}
 * {
   margin: 0;
   padding: 0;
