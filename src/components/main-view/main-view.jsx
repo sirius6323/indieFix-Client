@@ -178,6 +178,17 @@ class MainView extends React.Component {
 							);
 						}}
 					/>
+					<Route
+						exact
+						path='/profile'
+						render={({ history }) => {
+							return (
+								<Col>
+									<ProfileView onBackClick={() => history.goBack()} />
+								</Col>
+							);
+						}}
+					/>
 				</Row>
 			</Router>
 		);
