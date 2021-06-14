@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Button, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './movie-view.scss';
 import ParaNorman from 'url:../images/paraNorman.jpg';
-
-import { Link } from 'react-router-dom';
 
 // Component to display single movie view
 export class MovieView extends React.Component {
 	render() {
-		const { movie } = this.props;
+		const { movie, onBackClick } = this.props;
 
 		return (
 			<div className='movie-view'>
@@ -58,12 +57,15 @@ export class MovieView extends React.Component {
 								</Link>
 							</Col>
 							<Col>
-								<Link to={`/movies/${movies}`}>
+								<Link to={`/movies/${movie._id}`}>
 									<Button
 										size='sm'
 										variant='danger link'
 										className='mb-2'
 										block
+										onClick={() => {
+											onBackClick();
+										}}
 									>
 										Movies
 									</Button>
