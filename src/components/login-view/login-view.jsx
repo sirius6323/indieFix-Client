@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Container, Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './login-view.scss';
 
@@ -58,6 +59,7 @@ export function LoginView(props) {
 					</Form.Group>
 					<div className='d-grid gap-2 custom-button'>
 						<Button
+							className='mb-3'
 							variant='info primary'
 							type='submit'
 							size='sm'
@@ -66,15 +68,11 @@ export function LoginView(props) {
 						>
 							Submit
 						</Button>
-						<Button
-							variant='danger'
-							type='secondary'
-							size='sm'
-							onClick={props.toggleRegister}
-							block
-						>
-							Register
-						</Button>
+						<Link to={'/register'}>
+							<Button variant='danger' type='secondary link' size='md' block>
+								Register
+							</Button>
+						</Link>
 					</div>
 				</Form>
 			</div>
@@ -88,5 +86,4 @@ LoginView.propTypes = {
 		Password: PropTypes.string.isRequired,
 	}),
 	onLoggedIn: PropTypes.func.isRequired,
-	onRegister: PropTypes.func,
 };
