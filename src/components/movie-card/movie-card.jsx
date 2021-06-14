@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card, CardDeck } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './movie-card.scss';
 import ParaNorman from 'url:../images/paraNorman.jpg';
-
-import { Link } from 'react-router-dom';
 
 export class MovieCard extends React.Component {
 	render() {
@@ -20,7 +19,7 @@ export class MovieCard extends React.Component {
 					<Card.Body>
 						<Card.Title>{movie.Title}</Card.Title>
 						<Card.Text>{movie.Description.slice(0, 70)} ...'</Card.Text>
-						<Link to={`/movies/${movie._id}`}>
+						<Link to={`/movies/${movie._id}`} className='link-style'>
 							<Button variant='danger link' size='sm' block>
 								Movie Info
 							</Button>
