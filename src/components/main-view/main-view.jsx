@@ -7,6 +7,7 @@ import {
 	Link,
 } from 'react-router-dom';
 
+import { NavBar } from '../navbar/navbar';
 import { LoginView } from '../login-view/login-view';
 import { RegistrationView } from '../registration-view/registration-view';
 import { MovieCard } from '../movie-card/movie-card';
@@ -15,7 +16,7 @@ import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { ProfileView } from '../profile-view/profile-view';
 
-import { Row, Col, Navbar, Button } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 
 class MainView extends React.Component {
 	constructor() {
@@ -99,6 +100,7 @@ class MainView extends React.Component {
 							if (movies.length === 0) return <div className='main-view' />;
 							return movies.map((m) => (
 								<Col sm={6} md={4} lg={3} key={m._id}>
+									<NavBar />
 									<MovieCard movie={m} />
 								</Col>
 							));
@@ -128,6 +130,7 @@ class MainView extends React.Component {
 							if (movies.length === 0) return <div className='main-view' />;
 							return (
 								<Col md={8}>
+									<NavBar />
 									<MovieView
 										movie={movies.find((m) => m._id === match.params.movieId)}
 										onBackClick={() => history.goBack()}
@@ -150,6 +153,7 @@ class MainView extends React.Component {
 							if (movies.length === 0) return <div className='main-view' />;
 							return (
 								<Col md={8}>
+									<NavBar />
 									<GenreView
 										genre={
 											movies.find((m) => m.Genre.Name === match.params.name)
@@ -175,6 +179,7 @@ class MainView extends React.Component {
 							if (movies.length === 0) return <div className='main-view' />;
 							return (
 								<Col md={8}>
+									<NavBar />
 									<DirectorView
 										director={
 											movies.find((m) => m.Director.Name === match.params.name)
@@ -192,6 +197,7 @@ class MainView extends React.Component {
 						render={({ history }) => {
 							return (
 								<Col>
+									<NavBar />
 									<ProfileView onBackClick={() => history.goBack()} />
 								</Col>
 							);
