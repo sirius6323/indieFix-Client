@@ -33,7 +33,10 @@ export class MovieView extends React.Component {
 						</Card.Text>
 						<Row>
 							<Col>
-								<Link to={`/directors/${movie.Director.Name}`}>
+								<Link
+									to={`/directors/${movie.Director.Name}`}
+									style={{ textDecoration: 'none' }}
+								>
 									<Button
 										className='mb-2'
 										size='sm'
@@ -45,7 +48,10 @@ export class MovieView extends React.Component {
 								</Link>
 							</Col>
 							<Col>
-								<Link to={`/genres/${movie.Genre.Name}`}>
+								<Link
+									to={`/genres/${movie.Genre.Name}`}
+									style={{ textDecoration: 'none' }}
+								>
 									<Button
 										className='mb-2'
 										size='sm'
@@ -57,7 +63,10 @@ export class MovieView extends React.Component {
 								</Link>
 							</Col>
 							<Col>
-								<Link to={`/movies/${movie._id}`}>
+								<Link
+									to={`/movies/${movie._id}`}
+									style={{ textDecoration: 'none' }}
+								>
 									<Button
 										size='sm'
 										variant='danger link'
