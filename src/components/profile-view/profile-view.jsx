@@ -181,7 +181,7 @@ export class ProfileView extends React.Component {
 								className='mb-3'
 								variant='info primary'
 								type='submit'
-								size='sm'
+								expand='lg'
 								block
 								onClick={() => {
 									updateInfo(token);
@@ -189,22 +189,12 @@ export class ProfileView extends React.Component {
 							>
 								Update
 							</Button>
-							<Link to='/'>
-								<Button variant='danger' type='secondary link' size='md' block>
-									Back To Movies
-								</Button>
-							</Link>
 							<Button
 								className='mt-3'
-								variant='info'
+								variant='danger'
 								type='button'
 								size='sm'
 								block
-								onClick={() => {
-									deleteAccount(token);
-									onSignOut(null);
-									history.push('/');
-								}}
 							>
 								Delete Account
 							</Button>
