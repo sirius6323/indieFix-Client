@@ -19,7 +19,10 @@ export class MovieCard extends React.Component {
 					<Card.Body>
 						<Card.Title>{movie.Title}</Card.Title>
 						<Card.Text>{movie.Description.slice(0, 70)} ...'</Card.Text>
-						<Link to={`/movies/${movie._id}`} className='link-style'>
+						<Link
+							to={`/movies/${movie._id}`}
+							style={{ textDecoration: 'none' }}
+						>
 							<Button variant='danger link' size='sm' block>
 								Movie Info
 							</Button>
