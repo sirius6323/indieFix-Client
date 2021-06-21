@@ -4,13 +4,23 @@ import PropTypes from 'prop-types';
 
 // React Bootstrap Components
 import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 // Styles sheet
 import './navbar.scss';
 
+const logOut = () => {
+	localStorage.clear();
+	user({
+		user: null,
+		token: null,
+	});
+	window.open('/', '_self');
+};
+
 export class NavBar extends React.Component {
 	render() {
-		const { onLoggedOut, history, user, movie } = this.props;
+		const { logOut, user } = this.props;
 
 		return (
 			<>
@@ -23,23 +33,23 @@ export class NavBar extends React.Component {
 				>
 					<Navbar.Brand href='/'>indieFix</Navbar.Brand>
 					<Navbar.Toggle aria-controls='responsive-navbar-nav' />
-					<Navbar.Collapse>
-						<Nav className='mr-auto'>
-							<Nav.Link href='/movies/movieId' className='text-white mx-2'>
-								All Movies
-							</Nav.Link>
-							<Nav.Link href='/profile' className='text-white mx-2'>
+					<Navbar.Collapse bg='info' className='justify-content-end'>
+						<Nav className='d-flex navbar-bg'>
+							<Link
+								to='/profile'
+								className='text-white mx-4 my-2'
+								style={{ textDecoration: 'none' }}
+							>
 								Profile
-							</Nav.Link>
-
-							<Nav.Link
-								className='text-white mx-2'
-								onClick={() => {
-									onLoggedOut();
-								}}
+							</Link>
+							<Link
+								to='/'
+								className='text-white mx-4 my-2'
+								style={{ textDecoration: 'none' }}
+								onClick={logOut}
 							>
 								Log Out
-							</Nav.Link>
+							</Link>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>
@@ -49,5 +59,5 @@ export class NavBar extends React.Component {
 }
 
 NavBar.propTypes = {
-	onLoggedOut: PropTypes.func.isRequired,
+	logOut: PropTypes.func,
 };
