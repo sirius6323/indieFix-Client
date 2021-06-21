@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #0f1516;
   color: #fff;
   font-family: "Cutive Mono", monospace;
 }
@@ -12,7 +11,6 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #0f1516;
   color: #fff;
   font-family: "Cutive Mono", monospace;
 }
@@ -23,7 +21,6 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #0f1516;
   color: #fff;
   font-family: "Cutive Mono", monospace;
 }
@@ -47,7 +44,6 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #0f1516;
   color: #fff;
   font-family: "Cutive Mono", monospace;
 }
@@ -71,7 +67,6 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #0f1516;
   color: #fff;
   font-family: "Cutive Mono", monospace;
 }
@@ -95,9 +90,16 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #0f1516;
   color: #fff;
   font-family: "Cutive Mono", monospace;
+}
+
+.navbar-collapse {
+  background-color: #17a2b8;
+}
+
+.navbar-bg {
+  background-color: #17a2b8;
 }
 * {
   margin: 0;
