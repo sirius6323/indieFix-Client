@@ -11,7 +11,7 @@ import './navbar.scss';
 
 export class NavBar extends React.Component {
 	render() {
-		const { logOut, user } = this.props;
+		const { onLoggedOut, user } = this.props;
 
 		return (
 			<>
@@ -37,7 +37,7 @@ export class NavBar extends React.Component {
 								to='/'
 								className='text-white mx-4 my-2'
 								style={{ textDecoration: 'none' }}
-								onClick={logOut}
+								onClick={() => onLoggedOut()}
 							>
 								Log Out
 							</Link>
