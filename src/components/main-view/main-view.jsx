@@ -98,7 +98,7 @@ class MainView extends React.Component {
 
 		return (
 			<Router>
-				<Row className='main view justify-content-md-center'>
+				<Row className='main view justify-content-md-center py-5'>
 					<Route
 						exact
 						path='/'
