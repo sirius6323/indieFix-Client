@@ -49,6 +49,23 @@ class MainView extends React.Component {
 			});
 	}
 
+	getUsers(token) {
+		axios
+			.get('https://indiefix.herokuapp.com/movies', {
+				headers: { Authorization: `Bearer ${token}` },
+			})
+			.then((response) => {
+				// Assigns the the state
+				this.setState({
+					users: response.data,
+				});
+				console.log(response);
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
+	}
+
 	/* When a user successfully logs in, this function updates 
 	   the 'user' property in state to that 'particular user' */
 
