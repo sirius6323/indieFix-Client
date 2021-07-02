@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './profile-view.scss';
@@ -334,30 +334,8 @@ export class ProfileView extends React.Component {
 								</Form.Group>
 							</Col>
 						</Row>
-						<div className='d-grid gap-2 custom-button'>
-							<Button
-								className='mb-3'
-								variant='info primary'
-								type='submit'
-								expand='lg'
-								block
-								onClick={(e) => this.handleUpdate(e)}
-							>
-								Update
-							</Button>
-							<Button
-								className='mt-3'
-								variant='danger'
-								type='button'
-								size='sm'
-								block
-								onClick={() => this.handleDelete()}
-							>
-								Delete Account
-							</Button>
-						</div>
 						<div style={{ float: 'center', textAlign: 'center' }}>
-							<Card.Text className='mt-3' as='h3'>
+							<Card.Text className='mt-3' as='h5'>
 								Favorite Movies:
 							</Card.Text>
 							<Row>
@@ -383,6 +361,28 @@ export class ProfileView extends React.Component {
 									);
 								})}
 							</Row>
+						</div>
+						<div className='d-grid gap-2 custom-button'>
+							<Button
+								className='mb-3'
+								variant='info primary'
+								type='submit'
+								expand='lg'
+								block
+								onClick={(e) => this.handleUpdate(e)}
+							>
+								Update
+							</Button>
+							<Button
+								className='mt-3'
+								variant='danger'
+								type='button'
+								size='sm'
+								block
+								onClick={() => this.handleDelete()}
+							>
+								Delete Account
+							</Button>
 						</div>
 					</Form>
 				</div>
