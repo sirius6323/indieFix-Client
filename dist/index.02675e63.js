@@ -48109,7 +48109,7 @@ try {
             columnNumber: 7
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card.Text, {
-          className: "mt-3",
+          className: "mt-3 font-weight-bold",
           as: "h5",
           __self: this,
           __source: {
