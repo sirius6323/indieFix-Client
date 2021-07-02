@@ -71,6 +71,20 @@
   font-family: "Cutive Mono", monospace;
 }
 
+.navbar-collapse {
+  background-color: #17a2b8;
+}
+
+.navbar-bg {
+  background-color: #17a2b8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "Cutive Mono", monospace;
+}
+
 .register {
   padding-bottom: 20px;
 }
@@ -86,20 +100,6 @@
 .custom-button > Button {
   margin-top: 30px;
   font-size: 1.1rem;
-}
-* {
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  font-family: "Cutive Mono", monospace;
-}
-
-.navbar-collapse {
-  background-color: #17a2b8;
-}
-
-.navbar-bg {
-  background-color: #17a2b8;
 }
 * {
   margin: 0;
