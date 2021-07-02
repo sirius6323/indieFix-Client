@@ -9,15 +9,6 @@ import { Link } from 'react-router-dom';
 // Styles sheet
 import './navbar.scss';
 
-const logOut = () => {
-	localStorage.clear();
-	user({
-		user: null,
-		token: null,
-	});
-	window.open('/', '_self');
-};
-
 export class NavBar extends React.Component {
 	render() {
 		const { logOut, user } = this.props;
