@@ -9,18 +9,9 @@ import { Link } from 'react-router-dom';
 // Styles sheet
 import './navbar.scss';
 
-const logOut = () => {
-	localStorage.clear();
-	user({
-		user: null,
-		token: null,
-	});
-	window.open('/', '_self');
-};
-
 export class NavBar extends React.Component {
 	render() {
-		const { logOut, user } = this.props;
+		const { onLoggedOut, user } = this.props;
 
 		return (
 			<>
@@ -46,7 +37,7 @@ export class NavBar extends React.Component {
 								to='/'
 								className='text-white mx-4 my-2'
 								style={{ textDecoration: 'none' }}
-								onClick={logOut}
+								onClick={() => onLoggedOut()}
 							>
 								Log Out
 							</Link>
@@ -59,5 +50,5 @@ export class NavBar extends React.Component {
 }
 
 NavBar.propTypes = {
-	logOut: PropTypes.func,
+	onLoggedOut: PropTypes.func,
 };
