@@ -26386,7 +26386,7 @@ try {
             columnNumber: 4
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
-          className: "main view justify-content-md-center",
+          className: "main view justify-content-md-center py-5",
           __self: this,
           __source: {
             fileName: _jsxFileName,
