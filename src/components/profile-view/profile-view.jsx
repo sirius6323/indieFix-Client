@@ -335,7 +335,7 @@ export class ProfileView extends React.Component {
 							</Col>
 						</Row>
 						<div style={{ float: 'center', textAlign: 'center' }}>
-							<Card.Text className='mt-3' as='h5'>
+							<Card.Text className='mt-3 font-weight-bold' as='h5'>
 								Favorite Movies:
 							</Card.Text>
 							<Row>
