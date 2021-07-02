@@ -210,7 +210,11 @@ class MainView extends React.Component {
 							return (
 								<Col>
 									<NavBar />
-									<ProfileView onBackClick={() => history.goBack()} />
+									<ProfileView
+										onBackClick={() => history.goBack()}
+										movies={movies}
+										user={user}
+									/>
 								</Col>
 							);
 						}}
