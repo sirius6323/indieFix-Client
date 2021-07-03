@@ -93,6 +93,13 @@ class MainView extends React.Component {
 		});
 	}
 
+	onRegister(register) {
+		console.log(register);
+		this.setState({
+			register,
+		});
+	}
+
 	// toggleRegister = (e) => {
 	// 	e.preventDefault();
 	// 	this.setState({ register: !this.state.register });
