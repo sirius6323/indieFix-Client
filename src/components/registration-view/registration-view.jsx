@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Container, Form, Button, Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
+
+// React-Bootstrap Components
+import { Container, Form, Button, Row, Col } from 'react-bootstrap';
+
+// Router
+import { Link } from 'react-router-dom';
+
+// Styles
 import './registration-view.scss';
 
 export function RegistrationView(props) {
@@ -12,6 +18,14 @@ export function RegistrationView(props) {
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
 	const [email, setEmail] = useState('');
+
+	// States for validation
+	const [validateFirstName, setValidateFirstName] = useState('');
+	const [validateLastName, setValidateLastName] = useState('');
+	const [validateBirthday, setValidateBirthday] = useState('');
+	const [validateUsername, setValidateUsername] = useState('');
+	const [validatePassword, setValidatePassword] = useState('');
+	const [validateEmail, setValidateEmail] = useState('');
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
