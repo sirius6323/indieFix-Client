@@ -93,6 +93,23 @@ class MainView extends React.Component {
 		});
 	}
 
+	// Update user account
+	updateUser(data) {
+		this.setState({
+			user: data.Username,
+		});
+	}
+
+	// Deletes user account
+	deleteUser() {
+		localStorage.removeItem('token');
+		localStorage.removeIem('user');
+		this.setState({
+			user: null,
+			token: null,
+		});
+	}
+
 	onRegister(register) {
 		console.log(register);
 		this.setState({
