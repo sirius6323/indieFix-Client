@@ -159,9 +159,10 @@ class MainView extends React.Component {
 							);
 						}}
 					/>
+					{/* Genre View */}
 					<Route
 						exact
-						path='/genres/:name'
+						path='/genres/:Name'
 						render={({ match, history }) => {
 							if (!user)
 								return (
@@ -185,9 +186,10 @@ class MainView extends React.Component {
 							);
 						}}
 					/>
+					{/* Director View */}
 					<Route
 						exact
-						path='/directors/:name'
+						path='/directors/:Name'
 						render={({ match, history }) => {
 							if (!user)
 								return (
@@ -211,9 +213,10 @@ class MainView extends React.Component {
 							);
 						}}
 					/>
+					{/* Profile View */}
 					<Route
 						exact
-						path='/profile'
+						path='/users/:Username'
 						render={({ history }) => {
 							return (
 								<Col>
