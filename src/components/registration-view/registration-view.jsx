@@ -19,14 +19,6 @@ export function RegistrationView(props) {
 	const [password, setPassword] = useState('');
 	const [email, setEmail] = useState('');
 
-	// States for validation
-	const [validateFirstName, setValidateFirstName] = useState('');
-	const [validateLastName, setValidateLastName] = useState('');
-	const [validateBirthday, setValidateBirthday] = useState('');
-	const [validateUsername, setValidateUsername] = useState('');
-	const [validatePassword, setValidatePassword] = useState('');
-	const [validateEmail, setValidateEmail] = useState('');
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
