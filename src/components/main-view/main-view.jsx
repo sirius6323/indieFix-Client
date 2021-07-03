@@ -1,7 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+
+// Router
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
+// Components
 import { NavBar } from '../navbar/navbar';
 import { LoginView } from '../login-view/login-view';
 import { RegistrationView } from '../registration-view/registration-view';
@@ -11,6 +14,7 @@ import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { ProfileView } from '../profile-view/profile-view';
 
+// React Bootstrap
 import { Row, Col } from 'react-bootstrap';
 
 class MainView extends React.Component {
@@ -33,6 +37,7 @@ class MainView extends React.Component {
 		}
 	}
 
+	// Fetches all movies from DB
 	getMovies(token) {
 		axios
 			.get('https://indiefix.herokuapp.com/movies', {
@@ -80,25 +85,26 @@ class MainView extends React.Component {
 		this.getMovies(authData.token);
 	}
 
+	// Logout function that clears local storage
 	onLoggedOut() {
-		localStorage.removeItem('token');
-		localStorage.removeItem('user');
+		localStorage.clear();
 		this.setState({
 			user: null,
 		});
 	}
 
-	toggleRegister = (e) => {
-		e.preventDefault();
-		this.setState({ register: !this.state.register });
-	};
+	// toggleRegister = (e) => {
+	// 	e.preventDefault();
+	// 	this.setState({ register: !this.state.register });
+	// };
 
 	render() {
-		const { movies, user } = this.state;
+		const { movies, user, token, history } = this.state;
 
 		return (
 			<Router>
 				<Row className='main view justify-content-md-center'>
+					{/* Home */}
 					<Route
 						exact
 						path='/'
@@ -118,6 +124,7 @@ class MainView extends React.Component {
 							));
 						}}
 					/>
+					{/* Registration View */}
 					<Route
 						path='/register'
 						render={() => {
@@ -129,6 +136,7 @@ class MainView extends React.Component {
 							);
 						}}
 					/>
+					{/* Movie View */}
 					<Route
 						exact
 						path='/movies/:movieId'
