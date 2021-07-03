@@ -14,7 +14,85 @@ import './profile-view.scss';
 // Import movie poster
 import ParaNorman from 'url:../images/paraNorman.jpg';
 
-export function ProfileView({ user, token, delete, update, movies }) {
+export function ProfileView({ user, token, deleteUser, updateUser, movies }) {
+	const [newFirstName, updateFirstName] = useState('');
+	const [newLastName, updateLastName] = useState('');
+	const [newBirthday, updateBirthday] = useState('');
+	const [newUsername, updateUsername] = useState('');
+	const [newPassword, updatePassword] = useState('');
+	const [newEmail, updateEmail] = useState('');
+
+	// Validates states
+	const [validateFirstName, setValidateFirstName] = useState('');
+	const [validateLastName, setValidateLastName] = useState('');
+	const [validateBirthday, setValidateBirthday] = useState('');
+	const [validateUsername, setValidateUsername] = useState('');
+	const [validatePassword, setValidatePassword] = useState('');
+	const [validateEmail, setValidateEmail] = useState('');
+
+	const {
+		FirstName,
+		LastName,
+		Birthday,
+		Username,
+		Email,
+		FavoriteMovieList,
+	} = userProfile;
+
+	// First Name validation
+	const validateFirstName = (e) => {
+		if (e.target.value.length < 2) {
+			setValidateFirstName('First Name must contain more then 1 character');
+		} else {
+			setValidateFirstName('');
+		}
+	};
+
+	// Last Name validation
+	const validateLastName = (e) => {
+		if (e.target.value.length < 2) {
+			setValidateFirstName('Last Name must contain more then 1 character');
+		} else {
+			setValidateLastName('');
+		}
+	};
+
+	// Birthday validation
+	const validateBirthday = (e) => {
+		if (e.target.value.length === '') {
+			setValidateBirthday('Please enter your birthdate');
+		} else {
+			setValidateBirthday('');
+		}
+	};
+
+	// Username validation
+	const validateUsername = (e) => {
+		if (e.target.value.length < 0 && e.target.value.length < 5) {
+			setValidateFirstName('Username must contain more then 5 characters');
+		} else {
+			setValidateUsername('');
+		}
+	};
+
+	// Password validation
+	const validatePassword = (e) => {
+		if (e.target.value.length < 0 && e.target.value.length < 8) {
+			setValidatePassword('Password must be at least 8 characters');
+		} else {
+			setValidatePassword('');
+		}
+	};
+
+	// Password validation
+	const validateEmail = (e) => {
+		if (!e.target.value.match(/\S+@\S+\.\S+/) && e.target.value.length > 0) {
+			setValidateEmail('Please enter a valid email address');
+		} else {
+			setValidateEmail('');
+		}
+	};
+
 	return (
 		<Container>
 			<div className='d flex align-items-center justify-content-center'>
