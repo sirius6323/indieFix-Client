@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
+
+// React Bootstrap Components
+import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
+
+// Router
+import { Link } from 'react-router-dom';
+
+// Styles
 import './profile-view.scss';
+
+// Import movie poster
 import ParaNorman from 'url:../images/paraNorman.jpg';
 
 export class ProfileView extends React.Component {
