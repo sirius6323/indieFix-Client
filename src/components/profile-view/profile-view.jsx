@@ -93,6 +93,15 @@ export function ProfileView({ user, token, deleteUser, updateUser, movies }) {
 		}
 	};
 
+	// Handles changes in form 
+	handleChange(e) {
+		let { name, value } = e.target;
+
+		this.setState({
+			[name]: value
+		})
+	}
+
 	return (
 		<Container>
 			<div className='d flex align-items-center justify-content-center'>
