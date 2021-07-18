@@ -84,7 +84,7 @@ export function ProfileView({ user, token, deleteUser, updateUser, movies }) {
 		}
 	};
 
-	// Password validation
+	// Email validation
 	const validateEmail = (e) => {
 		if (!e.target.value.match(/\S+@\S+\.\S+/) && e.target.value.length > 0) {
 			setValidateEmail('Please enter a valid email address');
