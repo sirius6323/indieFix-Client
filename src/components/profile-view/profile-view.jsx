@@ -69,7 +69,7 @@ export function ProfileView({ user, token, deleteUser, updateUser, movies }) {
 	// Username validation
 	const validateUsername = (e) => {
 		if (e.target.value.length < 0 && e.target.value.length < 5) {
-			setValidateFirstName('Username must contain more then 5 characters');
+			setValidateFirstName('Username must contain at least 5 characters');
 		} else {
 			setValidateUsername('');
 		}
