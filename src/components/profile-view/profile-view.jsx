@@ -39,68 +39,59 @@ export function ProfileView({ user, token, deleteUser, updateUser, movies }) {
 		FavoriteMovieList,
 	} = userProfile;
 
-	// First Name validation
-	const validateFirstName = (e) => {
-		if (e.target.value.length < 2) {
-			setValidateFirstName('First Name must contain more then 1 character');
-		} else {
-			setValidateFirstName('');
-		}
-	};
+	// // First Name validation
+	// const validateFirstName = (e) => {
+	// 	if (e.target.value.length < 2) {
+	// 		setValidateFirstName('First Name must contain more then 1 character');
+	// 	} else {
+	// 		setValidateFirstName('');
+	// 	}
+	// };
 
-	// Last Name validation
-	const validateLastName = (e) => {
-		if (e.target.value.length < 2) {
-			setValidateFirstName('Last Name must contain more then 1 character');
-		} else {
-			setValidateLastName('');
-		}
-	};
+	// // Last Name validation
+	// const validateLastName = (e) => {
+	// 	if (e.target.value.length < 2) {
+	// 		setValidateFirstName('Last Name must contain more then 1 character');
+	// 	} else {
+	// 		setValidateLastName('');
+	// 	}
+	// };
 
-	// Birthday validation
-	const validateBirthday = (e) => {
-		if (e.target.value.length === '') {
-			setValidateBirthday('Please enter your birthdate');
-		} else {
-			setValidateBirthday('');
-		}
-	};
+	// // Birthday validation
+	// const validateBirthday = (e) => {
+	// 	if (e.target.value.length === '') {
+	// 		setValidateBirthday('Please enter your birthdate');
+	// 	} else {
+	// 		setValidateBirthday('');
+	// 	}
+	// };
 
-	// Username validation
-	const validateUsername = (e) => {
-		if (e.target.value.length < 0 && e.target.value.length < 5) {
-			setValidateUsername('Username must contain at least 5 characters');
-		} else {
-			setValidateUsername('');
-		}
-	};
+	// // Username validation
+	// const validateUsername = (e) => {
+	// 	if (e.target.value.length < 0 && e.target.value.length < 5) {
+	// 		setValidateUsername('Username must contain at least 5 characters');
+	// 	} else {
+	// 		setValidateUsername('');
+	// 	}
+	// };
 
-	// Password validation
-	const validatePassword = (e) => {
-		if (e.target.value.length < 0 && e.target.value.length < 8) {
-			setValidatePassword('Password must be at least 8 characters');
-		} else {
-			setValidatePassword('');
-		}
-	};
+	// // Password validation
+	// const validatePassword = (e) => {
+	// 	if (e.target.value.length < 0 && e.target.value.length < 8) {
+	// 		setValidatePassword('Password must be at least 8 characters');
+	// 	} else {
+	// 		setValidatePassword('');
+	// 	}
+	// };
 
-	// Email validation
-	const validateEmail = (e) => {
-		if (!e.target.value.match(/\S+@\S+\.\S+/) && e.target.value.length > 0) {
-			setValidateEmail('Please enter a valid email address');
-		} else {
-			setValidateEmail('');
-		}
-	};
-
-	// Handles changes in form 
-	handleChange(e) {
-		let { name, value } = e.target;
-
-		this.setState({
-			[name]: value
-		})
-	}
+	// // Email validation
+	// const validateEmail = (e) => {
+	// 	if (!e.target.value.match(/\S+@\S+\.\S+/) && e.target.value.length > 0) {
+	// 		setValidateEmail('Please enter a valid email address');
+	// 	} else {
+	// 		setValidateEmail('');
+	// 	}
+	// };
 
 	return (
 		<Container>
@@ -280,7 +271,7 @@ export function ProfileView({ user, token, deleteUser, updateUser, movies }) {
 							type='button'
 							size='sm'
 							block
-							onClick={() => this.handleDelete()}
+							onClick={() => this.handleDelete(e)}
 						>
 							Delete Account
 						</Button>
